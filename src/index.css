@@ -19,6 +19,30 @@
 
 /* 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Background
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+*/
+
+.content-dark {
+  background-color: var(--background-dark);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.content-light {
+  background-color: var(--background-light);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     Links
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 */
@@ -36,11 +60,30 @@
   list-style: none;
 }
 
+.links-dark {
+  font-size: 100px;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.links-dark a {
+  text-decoration: none;
+  color: #1BF2DD;  
+}
+
+.links-dark .links-list {
+  list-style: none;
+}
+
 /* 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     Footer
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 */
+.icon {
+  font-size: 30px;
+  margin-right: 0.3vw;
+}
+
 .footer-main-light {
   position: fixed;
   bottom: 0;
@@ -63,11 +106,6 @@
   color: var(--background-dark);
 }
 
-.icon {
-  font-size: 30px;
-  margin-right: 0.3vw;
-}
-
 .footer-main-text-item-light {
   margin-top: auto;
   margin-bottom: auto;
@@ -82,4 +120,44 @@
 
 #moon-icon-light {
   margin-right: 1vw;
+}
+
+.footer-main-dark {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 100%
+}
+
+.footer-main-text-dark {
+  display: flex;
+  justify-content: center;
+  font-family: "Montserrat", sans-serif;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.footer-main-icons-dark {
+  position: fixed;
+  bottom: 5px;
+  left: 8px;
+  color: var(--footer-color-dark);
+}
+
+.footer-main-text-item-dark {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.darkModeText-dark {
+  border: none;
+  outline: none;
+  background-color: none;
+  color: var(--footer-color-dark);
+  user-select: none;
+}
+
+#moon-icon-dark {
+  margin-right: 1vw;
+  color:var(--footer-color-dark);
 }
