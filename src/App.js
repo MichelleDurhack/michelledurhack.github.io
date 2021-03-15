@@ -6,6 +6,7 @@ import GraphicDesign from './components/GraphicDesign';
 import Handletterer from './components/Handletterer';
 import AboutMe from './components/AboutMe';
 import LinkBox from './components/LinkBox';
+import Footer from './components/Footer';
 
 function App() {
   const [ theme, setTheme ] = useState("light");
@@ -23,6 +24,7 @@ function App() {
             <Route path="/" exact component={LinkBox}/>
           </Switch>
         </div>
+        <Footer />
       </div>
     </ThemeContext.Provider>
   );

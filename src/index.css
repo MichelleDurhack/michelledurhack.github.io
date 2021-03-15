@@ -35,3 +35,51 @@
 .links-light .links-list {
   list-style: none;
 }
+
+/* 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Footer
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+*/
+.footer-main-light {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 100%
+}
+
+.footer-main-text-light {
+  display: flex;
+  justify-content: center;
+  font-family: "Montserrat", sans-serif;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.footer-main-icons-light {
+  position: fixed;
+  bottom: 5px;
+  left: 8px;
+  color: var(--background-dark);
+}
+
+.icon {
+  font-size: 30px;
+  margin-right: 0.3vw;
+}
+
+.footer-main-text-item-light {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.darkModeText-light {
+  border: none;
+  outline: none;
+  background-color: none;
+  user-select: none;
+}
+
+#moon-icon-light {
+  margin-right: 1vw;
+}
