@@ -2,7 +2,12 @@ import { Fragment } from 'react';
 const AboutMe = () => {
   return (
     <Fragment>
-      <div className="container">
+      <div className="headerbox">
+        <h2 id="aboutCaption">About me and my skills</h2>
+      </div>
+
+      <div className="main">
+        <div className="container">
 
         <div className="card">
           <div className="face face1">
@@ -80,6 +85,7 @@ const AboutMe = () => {
           </div>
         </div>
 
+        </div>
       </div>
     </Fragment>
   );

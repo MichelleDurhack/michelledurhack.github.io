@@ -15,7 +15,7 @@ function App() {
     <ThemeContext.Provider value={{ theme, setTheme }}>
       <div className={`content-${theme}`}>
         <p>Michelle Durhack</p>
-        <div className="main">
+        <div className="componentBox">
           <Switch>
             <Route path="/webdev" component={WebDeveloper}/>
             <Route path="/design" component={GraphicDesign}/>
