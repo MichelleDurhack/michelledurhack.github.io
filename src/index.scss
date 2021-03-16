@@ -3,7 +3,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Fascinate&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap');
-@import url("https://fonts.googleapis.com/css2?family=Righteous&display=swap");
 
 :root {
   --light-pink: #D99A91;
@@ -12,6 +11,10 @@
   --background-light: white;
   --footer-color-dark: #F205E2;
 }
+
+$gradient-color-primary: #654ea3;
+$gradient-color-secondary: #eaafc8;
+$background-dark: #1D2426;
 
 .main {
   display: flex;
@@ -173,8 +176,6 @@ body {
   padding: 0;
   display: flex;
   justify-content: center;
-  align-items: center;
-  font-family: "Righteous", cursive;
   min-height: 100vh;
   background-color: #a9c9ff;
 
@@ -188,10 +189,10 @@ body {
 
     .card {
       position: relative;
-      width: 300px;
-      height: 400px;
+      width: 350px;
+      height: 450px;
       margin: 0 auto;
-      background: #000;
+      background: $background-dark;
       border-radius: 15px;
       box-shadow: 0 15px 60px rgba(0, 0, 0, 0.5);
 
@@ -202,12 +203,13 @@ body {
         width: 100%;
         height: 100%;
         display: flex;
+        font-family: 'Maven Pro', sans-serif;
         justify-content: center;
         align-items: center;
 
         &.face1 {
           box-sizing: border-box;
-          padding: 20px;
+          padding: 0 20px;
 
           h2 {
             margin: 0;
@@ -215,19 +217,25 @@ body {
           }
 
           .handlettering {
-            background-color: #fffc00;
+            background-color: $gradient-color-secondary;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
           }
 
           .webdev {
-            background-color: #00fffc;
+            background-color: $gradient-color-secondary;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+          }
+
+          .devskills {
+            background-color: $gradient-color-secondary;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
           }
 
           .design {
-            background-color: #fc00ff;
+            background-color:  $gradient-color-secondary;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
           }
@@ -258,18 +266,27 @@ body {
     }
 
     .card:nth-child(1) .face.face2 {
-      background: linear-gradient(40deg, #eaafc8 2%,#654ea3);
+      background: linear-gradient(40deg, $gradient-color-secondary 20%, $gradient-color-primary);
       border-radius: 15px;
     }
 
     .card:nth-child(2) .face.face2 {
-      background: linear-gradient(40deg, #654ea3 60%, #eaafc8);
+      background: linear-gradient(40deg,  $gradient-color-primary 60%, $gradient-color-secondary);
       border-radius: 15px;
     }
 
     .card:nth-child(3) .face.face2 {
-      background: linear-gradient(40deg, #654ea3, #eaafc8);
+      background: linear-gradient(40deg,  $gradient-color-primary, $gradient-color-secondary);
+      border-radius: 15px;
+    }
+    .card:nth-child(4) .face.face2 {
+      background: linear-gradient(40deg,  $gradient-color-secondary 40%, $gradient-color-primary);
       border-radius: 15px;
     }
   }
+}
+
+ul {
+  list-style: none;
+  padding: 0;
 }
