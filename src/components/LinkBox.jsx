@@ -6,7 +6,7 @@ const LinkBox = () => {
   const { theme } = useContext(ThemeContext);
   return (
     <div className="main">
-      <div className={`links-${theme}`}>
+      <div className={`links links-${theme}`}>
         <ul className="links-list">
           <li className="links-list-item">
             <Link to="/me">ME</Link>

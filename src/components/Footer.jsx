@@ -7,22 +7,25 @@ const Footer = () => {
   const moonClassName = theme === "light" ? "far fa-moon" : "fas fa-cloud-moon";
 
   return (
-    <div className={"footer-main-" + theme}>
-      <div className={"footer-main-icons-" + theme}>
-        <span id="footer-icon-instagram" className="fab fa-instagram icon"></span>
-        <span id="footer-icon-behance" className="fab fa-behance icon"></span>
-        <span id="footer-icon-linkedin" className="fab fa-linkedin-in icon"></span>
-      </div>
-      <div className={"footer-main-text-" + theme}>
-        <div className={"footer-main-text-item-" + theme} onClick={() => theme === "light" ? setTheme("dark") : setTheme("light")}>
-          <span id={"moon-icon-" + theme} className={moonClassName}></span>
+    <div className="main">
+      <div className={"footer ftmain-" + theme}>
+        <div className={"ftIcons fticons-" + theme}>
+          <span id="fticon-instagram" className="fab fa-instagram icon"></span>
+          <span id="fticon-behance" className="fab fa-behance icon"></span>
+          <span id="fticon-linkedin" className="fab fa-linkedin-in icon"></span>
         </div>
-        <div className={"footer-main-text-item-" + theme} onClick={() => theme === "light" ? setTheme("dark") : setTheme("light")}>
-          <p className={"darkModeText-" + theme}>Change up the mood</p>
-          {console.log(theme)}
+        <div className={"ftText fttext-" + theme}>
+          <div className={"ftItem ftitem-" + theme} onClick={() => theme === "light" ? setTheme("dark") : setTheme("light")}>
+            <span id={"mn mnicon-" + theme} className={moonClassName}></span>
+          </div>
+          <div className={"ftItem ftitem-" + theme} onClick={() => theme === "light" ? setTheme("dark") : setTheme("light")}>
+            <p className={"btn btnText-" + theme}>Change up the mood</p>
+            {console.log(theme)}
+          </div>
         </div>
       </div>
     </div>
+
   );
 }
  

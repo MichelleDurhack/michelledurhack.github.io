@@ -13,7 +13,7 @@ function App() {
 
   return (
     <ThemeContext.Provider value={{ theme, setTheme }}>
-      <div className={`content-${theme}`}>
+      <div className={`content content-${theme}`}>
         <p>Michelle Durhack</p>
         <div className="componentBox">
           <Switch>

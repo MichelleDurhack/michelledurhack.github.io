@@ -6,22 +6,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Sacramento&display=swap');
 
-:root {
-  --light-pink: #D99A91;
-  --background-pink: #E2C1BA;
-  --background-dark: #1D2426;
-  --background-light: white;
-  --footer-color-dark: #F205E2;
-}
-
 $gradient-color-primary: #654ea3;
 $gradient-color-secondary: #eaafc8;
 $background-dark: #1D2426;
-
-.main {
-  display: flex;
-  justify-content: center;
-}
+$background-light: white;
+$footer-color-dark: #F205E2;
+$pastel-salmon: #D99A91;
+$pastel-salmon-light: #E2C1BA;
 
 /* 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -29,22 +20,25 @@ $background-dark: #1D2426;
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 */
 
-.content-dark {
-  background-color: var(--background-dark);
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+.main {
+  display: flex;
+  justify-content: center;
 }
 
-.content-light {
-  background-color: var(--background-light);
+.content {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
+
+  &.content-dark {
+    background-color: $background-dark;
+  }
+
+  &.content-light {
+    background-color: $background-light;
+  }
 }
 
 /* 
@@ -52,32 +46,32 @@ $background-dark: #1D2426;
     Links
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 */
-.links-light {
+.links {
   font-size: 100px;
-  font-family: 'Maven Pro', sans-serif;
-}
 
-.links-light a {
-  text-decoration: none;
-  color: grey;
-}
+  .links-list {
+    list-style: none;
 
-.links-light .links-list {
-  list-style: none;
-}
+    a {
+      text-decoration: none;
+    }
+  }
 
-.links-dark {
-  font-size: 100px;
-  font-family: 'JetBrains Mono', monospace;
-}
+  &.links-light {
+    font-family: 'Maven Pro', sans-serif;
 
-.links-dark a {
-  text-decoration: none;
-  color: #1BF2DD;  
-}
+    a {
+      color: grey;
+    }
+  }
 
-.links-dark .links-list {
-  list-style: none;
+  &.links-dark {
+    font-family: 'JetBrains Mono', monospace;
+
+    a {
+      color: #1BF2DD;
+    }
+  }
 }
 
 /* 
@@ -90,82 +84,56 @@ $background-dark: #1D2426;
   margin-right: 0.3vw;
 }
 
-.footer-main-light {
+.footer {
   position: fixed;
   bottom: 0;
   right: 0;
-  width: 100%
-}
+  width: 100%;
 
-.footer-main-text-light {
-  display: flex;
-  justify-content: center;
-  font-family: "Montserrat", sans-serif;
-  font-size: 30px;
-  cursor: pointer;
-}
+  .ftIcons {
+    position: fixed;
+    bottom: 5px;
+    left: 8px;
 
-.footer-main-icons-light {
-  position: fixed;
-  bottom: 5px;
-  left: 8px;
-  color: var(--background-dark);
-}
+    &.fticons-dark {
+      color: #F205E2;
+    }
 
-.footer-main-text-item-light {
-  margin-top: auto;
-  margin-bottom: auto;
-}
+    &.fticons-light {
+      color: $background-dark
+    }
+  }
 
-.darkModeText-light {
-  border: none;
-  outline: none;
-  background-color: none;
-  user-select: none;
-}
+  .ftText {
+    display: flex;
+    justify-content: center;
+    font-size: 30px;
+    font-family: "Montserrat", sans-serif;
+    cursor: pointer;
+    margin-top: auto;
+    margin-bottom: auto;
 
-#moon-icon-light {
-  margin-right: 1vw;
-}
+    .ftItem {
+      margin-top: auto;
+      margin-bottom: auto;
+      margin-right: 1vw;
 
-.footer-main-dark {
-  position: fixed;
-  bottom: 0;
-  right: 0;
-  width: 100%
-}
+      &.ftitem-dark {
+        color: #F205E2;
+      }
+    }
 
-.footer-main-text-dark {
-  display: flex;
-  justify-content: center;
-  font-family: "Montserrat", sans-serif;
-  font-size: 30px;
-  cursor: pointer;
-}
+    .btn {
+      border: none;
+      outline: none;
+      background-color: none;
+      user-select: none;
 
-.footer-main-icons-dark {
-  position: fixed;
-  bottom: 5px;
-  left: 8px;
-  color: var(--footer-color-dark);
-}
-
-.footer-main-text-item-dark {
-  margin-top: auto;
-  margin-bottom: auto;
-}
-
-.darkModeText-dark {
-  border: none;
-  outline: none;
-  background-color: none;
-  color: var(--footer-color-dark);
-  user-select: none;
-}
-
-#moon-icon-dark {
-  margin-right: 1vw;
-  color:var(--footer-color-dark);
+      &.btnText-dark {
+        color: #F205E2;
+      }
+    }
+  }
 }
 
 /* 
