@@ -258,32 +258,17 @@ body {
     }
 
     .card:nth-child(1) .face.face2 {
-      background-image: linear-gradient(
-        40deg,
-        #fffc00 0%,
-        #fc00ff 45%,
-        #00fffc 100%
-      );
+      background: linear-gradient(40deg, #eaafc8 2%,#654ea3);
       border-radius: 15px;
     }
 
     .card:nth-child(2) .face.face2 {
-      background-image: linear-gradient(
-        40deg,
-        #fc00ff 0%,
-        #00fffc 45%,
-        #fffc00 100%
-      );
+      background: linear-gradient(40deg, #654ea3 60%, #eaafc8);
       border-radius: 15px;
     }
 
     .card:nth-child(3) .face.face2 {
-      background-image: linear-gradient(
-        40deg,
-        #00fffc 0%,
-        #fc00ff 45%,
-        #fffc00 100%
-      );
+      background: linear-gradient(40deg, #654ea3, #eaafc8);
       border-radius: 15px;
     }
   }
