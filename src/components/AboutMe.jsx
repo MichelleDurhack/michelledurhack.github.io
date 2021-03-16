@@ -1,9 +1,10 @@
 import { Fragment } from 'react';
+
 const AboutMe = () => {
   return (
     <Fragment>
       <div className="headerbox">
-        <h2 id="aboutCaption">About me and my skills</h2>
+        <h2 id="aboutCaption">About my skills</h2>
       </div>
 
       <div className="main">
