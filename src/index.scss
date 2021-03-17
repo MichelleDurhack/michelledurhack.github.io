@@ -5,14 +5,18 @@
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Sacramento&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
 
 $gradient-color-primary: #654ea3;
 $gradient-color-secondary: #eaafc8;
+$dark-gradient-color-primary:  #fc00ff;
+$dark-gradient-color-secondary: #00dbde;
 $background-dark: #1D2426;
 $background-light: white;
 $footer-color-dark: #F205E2;
 $pastel-salmon: #D99A91;
 $pastel-salmon-light: #E2C1BA;
+$strong-turquoise: #05F2D8;
 
 /* 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -141,6 +145,11 @@ $pastel-salmon-light: #E2C1BA;
     About Me
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 */
+ul {
+  list-style: none;
+  padding: 0;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -186,30 +195,57 @@ body {
             padding: 0;
           }
 
-          .handlettering {
-            background-color: $gradient-color-secondary;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-          }
+          .cardcontent {
 
-          .webdev {
-            background-color: $gradient-color-secondary;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+            .handlettering-light {
+              background-color: $gradient-color-secondary;
+              -webkit-background-clip: text;
+              -webkit-text-fill-color: transparent;
+            }
+  
+            .webdev-light {
+              background-color: $gradient-color-secondary;
+              -webkit-background-clip: text;
+              -webkit-text-fill-color: transparent;
+            }
+  
+            .devskills-light {
+              background-color: $gradient-color-secondary;
+              -webkit-background-clip: text;
+              -webkit-text-fill-color: transparent;
+            }
+  
+            .design-light {
+              background-color:  $gradient-color-secondary;
+              -webkit-background-clip: text;
+              -webkit-text-fill-color: transparent;
+            }
+  
+            .handlettering-dark {
+              background-color: $dark-gradient-color-secondary;
+              -webkit-background-clip: text;
+              -webkit-text-fill-color: transparent;
+            }
+  
+            .webdev-dark {
+              background-color: $dark-gradient-color-secondary;
+              -webkit-background-clip: text;
+              -webkit-text-fill-color: transparent;
+            }
+  
+            .devskills-dark {
+              background-color: $dark-gradient-color-secondary;
+              -webkit-background-clip: text;
+              -webkit-text-fill-color: transparent;
+            }
+  
+            .design-dark {
+              background-color: $dark-gradient-color-secondary;
+              -webkit-background-clip: text;
+              -webkit-text-fill-color: transparent;
+            }
           }
-
-          .devskills {
-            background-color: $gradient-color-secondary;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
           }
-
-          .design {
-            background-color:  $gradient-color-secondary;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-          }
-        }
 
         &.face2 {
           transition: 0.5s;
@@ -235,32 +271,46 @@ body {
       }
     }
 
-    .card:nth-child(1) .face.face2 {
+    .card:nth-child(1) .face.face2-light {
       background: linear-gradient(40deg, $gradient-color-secondary 20%, $gradient-color-primary);
       border-radius: 15px;
     }
 
-    .card:nth-child(2) .face.face2 {
+    .card:nth-child(2) .face.face2-light {
       background: linear-gradient(40deg,  $gradient-color-primary 60%, $gradient-color-secondary);
       border-radius: 15px;
     }
 
-    .card:nth-child(3) .face.face2 {
+    .card:nth-child(3) .face.face2-light {
       background: linear-gradient(40deg,  $gradient-color-primary, $gradient-color-secondary);
       border-radius: 15px;
     }
-    .card:nth-child(4) .face.face2 {
+
+    .card:nth-child(4) .face.face2-light {
       background: linear-gradient(40deg,  $gradient-color-secondary 40%, $gradient-color-primary);
+      border-radius: 15px;
+    }
+
+    .card:nth-child(1) .face.face2-dark {
+      background: linear-gradient(40deg, $dark-gradient-color-secondary 20%, $dark-gradient-color-primary);
+      border-radius: 15px;
+    }
+
+    .card:nth-child(2) .face.face2-dark {
+      background: linear-gradient(40deg,  $dark-gradient-color-primary 60%, $dark-gradient-color-secondary);
+      border-radius: 15px;
+    }
+
+    .card:nth-child(3) .face.face2-dark {
+      background: linear-gradient(40deg,  $dark-gradient-color-primary, $dark-gradient-color-secondary);
+      border-radius: 15px;
+    }
+    .card:nth-child(4) .face.face2-dark {
+      background: linear-gradient(40deg,  $dark-gradient-color-secondary 40%, $dark-gradient-color-primary);
       border-radius: 15px;
     }
   }
 }
-
-ul {
-  list-style: none;
-  padding: 0;
-}
-
 
 .headerbox {
   width: 100%;
@@ -268,9 +318,15 @@ ul {
   justify-content: center;
   padding: 0;
 
-  h2#aboutCaption {
+  h2#aboutCaption-light {
     font-family: 'Sacramento', cursive;
     font-size: 10vh;
     color: $background-dark;
+  }
+
+  h2#aboutCaption-dark {
+    font-family: 'Abril Fatface', cursive;
+    font-size: 10vh;
+    color: $strong-turquoise;
   }
 }

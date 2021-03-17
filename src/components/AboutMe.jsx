@@ -1,10 +1,12 @@
-import { Fragment } from 'react';
+import { Fragment, useContext } from 'react';
+import { ThemeContext } from './../ThemeContext';
 
 const AboutMe = () => {
+  const { theme } = useContext(ThemeContext);
   return (
     <Fragment>
       <div className="headerbox">
-        <h2 id="aboutCaption">About my skills</h2>
+        <h2 id={`aboutCaption-${theme}`}>About my skills</h2>
       </div>
 
       <div className="main">
@@ -12,9 +14,9 @@ const AboutMe = () => {
 
         <div className="card">
           <div className="face face1">
-            <div className="content">
-              <h2 className="handlettering list">Handlettering</h2>
-              <ul className="handlettering">
+            <div className="cardcontent">
+              <h2 className={`handlettering-${theme}`}>Handlettering</h2>
+              <ul className={`handlettering-${theme}`}>
                 <li>Brushlettering</li>
                 <li>Calligraphy</li>
                 <li>Faux Calligraphy</li>
@@ -22,16 +24,16 @@ const AboutMe = () => {
               </ul>
             </div>
           </div>
-          <div className="face face2">
+          <div className={`face face2 face2-${theme}`}>
             <h2>HA</h2>
           </div>
         </div>
 
         <div className="card">
           <div className="face face1">
-            <div className="content">
-              <h2 className="webdev">Web Development</h2>
-              <ul className="webdev">
+            <div className="cardcontent">
+              <h2 className={`webdev-${theme}`}>Web Development</h2>
+              <ul className={`webdev-${theme}`}>
                 <li>MongoDB</li>
                 <li>ExpressJS</li>
                 <li>ReactJS</li>
@@ -44,16 +46,16 @@ const AboutMe = () => {
               </ul>
             </div>
           </div>
-          <div className="face face2">
+          <div className={`face face2 face2-${theme}`}>
             <h2>WD</h2>
           </div>
         </div>
 
         <div className="card">
           <div className="face face1">
-            <div className="content">
-              <h2 className="devskills">Development Skills</h2>
-              <ul className="devskills">
+            <div className="cardcontent">
+              <h2 className={`devskills-${theme}`}>Development Skills</h2>
+              <ul className={`devskills-${theme}`}>
                 <li>NPM</li>
                 <li>RestAPI</li>
                 <li>Git</li>
@@ -63,16 +65,16 @@ const AboutMe = () => {
               </ul>
             </div>
           </div>
-          <div className="face face2">
+          <div className={`face face2 face2-${theme}`}>
             <h2>DS</h2>
           </div>
         </div>
 
         <div className="card">
           <div className="face face1">
-            <div className="content">
-              <h2 className="design">Design</h2>
-              <ul className="design">
+            <div className="cardcontent">
+              <h2 className={`design-${theme}`}>Design</h2>
+              <ul className={`design-${theme}`}>
                 <li>Adobe Illustrator</li>
                 <li>Adobe Photoshop</li>
                 <li>Adobe InDesign</li>
@@ -81,7 +83,7 @@ const AboutMe = () => {
               </ul>
             </div>
           </div>
-          <div className="face face2">
+          <div className={`face face2 face2-${theme}`}>
             <h2>DE</h2>
           </div>
         </div>
