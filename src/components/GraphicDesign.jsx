@@ -1,6 +1,28 @@
+import { Fragment } from "react";
+
 const GraphicDesign = () => {
   return (
-    <h1>Graphic Designer</h1>
+    <Fragment>
+      <div className="headerbox">
+        <h2>Graphic Design</h2>
+      </div>
+      <div className="main">
+
+      <div className="graphCardContainer">
+
+        <div className="graphicCard">
+          <div className="conFront front">
+            <div className="mainContent"></div>
+          </div>
+          <div className="conFront back">
+            <h2>Vaporwave</h2>
+          </div>
+        </div>
+
+      </div>
+
+      </div>
+    </Fragment>
   );
 }
  
