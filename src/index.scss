@@ -11,6 +11,9 @@ $gradient-color-primary: #654ea3;
 $gradient-color-secondary: #eaafc8;
 $dark-gradient-color-primary:  #fc00ff;
 $dark-gradient-color-secondary: #00dbde;
+$megatron-gradient-primary: #c6ffdd ;
+$megatron-gradient-secondary: #fbd786;
+$megatron-gradient-tertiary: #f7797d;
 $background-dark: #1D2426;
 $background-light: white;
 $footer-color-dark: #F205E2;
@@ -23,14 +26,12 @@ $strong-turquoise: #05F2D8;
     Background
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 */
-
 .main {
   display: flex;
   justify-content: center;
 }
 
 .content {
-  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -89,13 +90,13 @@ $strong-turquoise: #05F2D8;
 }
 
 .footer {
-  position: fixed;
+  position: sticky;
   bottom: 0;
   right: 0;
   width: 100%;
 
   .ftIcons {
-    position: fixed;
+    position: sticky;
     bottom: 5px;
     left: 8px;
 
@@ -156,7 +157,8 @@ body {
   display: flex;
   justify-content: center;
   min-height: 100vh;
-  background-color: #a9c9ff;
+  height: 100%;
+  // background-color: #a9c9ff;
 
   .container {
     max-width: 100vw;
@@ -336,82 +338,3 @@ body {
     Graphic Design
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 */
-body {
-
-  .graphCardContainer {
-    max-width: 100vw;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    grid-gap: 35px;
-    margin: 0 auto;
-    padding: 40px 0;
-
-    .graphicCard {
-      position: relative;
-      width: 350px;
-      height: 450px;
-      margin: 0 20px;
-      border-radius: 15px;
-      box-shadow: 0 15px 60px rgba(0, 0, 0, 0.5);
-
-      &#vapor1 {
-        background-image: url("./media/vapor1.jpg");
-        background-size: 20vw;
-      }
-
-      &#vapor2 {
-        background-image: url("./media/vapor2.jpg");
-        background-size: 20vw;
-      }
-
-      &#vapor3 {
-        background-image: url("./media/vapor3.jpg");
-        background-size: 19vw;
-      }
-
-      .conFront {
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        display: flex;
-        font-family: 'Maven Pro', sans-serif;
-        justify-content: center;
-        align-items: center;
-
-        &.front {
-          box-sizing: border-box;
-          padding: 0 20px;
-        }
-
-        &.back {
-          transition: 0.5s;
-
-          h2 {
-            margin: 0;
-            padding: 0;
-            font-size: 3em;
-            color: #fff;
-            transition: 0.5s;
-            text-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-            z-index: 10;
-          }
-        }
-      }
-    }
-
-    .graphicCard:hover .conFront.back {
-      height: 60px;
-
-      h2 {
-        font-size: 2em;
-      }
-    }
-
-    .graphicCard:nth-child(1) .conFront.back {
-      background: linear-gradient(40deg, $gradient-color-secondary 20%, $gradient-color-primary);
-      border-radius: 15px;
-    }
-  }
-}
