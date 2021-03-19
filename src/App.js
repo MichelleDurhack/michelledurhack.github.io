@@ -13,18 +13,20 @@ function App() {
 
   return (
     <ThemeContext.Provider value={{ theme, setTheme }}>
-      <div className={`content content-${theme}`}>
-        <p>Michelle Durhack</p>
-        <div className="componentBox">
-          <Switch>
-            <Route path="/webdev" component={WebDeveloper}/>
-            <Route path="/design" component={GraphicDesign}/>
-            <Route path="/lettering" component={Handletterer}/>
-            <Route path="/me" component={AboutMe}/>
-            <Route path="/" exact component={LinkBox}/>
-          </Switch>
+      <div className={`background bkg-${theme}`}>
+        <div className={`content content-${theme}`}>
+          <p>Michelle Durhack</p>
+          <div className="componentBox">
+            <Switch>
+              <Route path="/webdev" component={WebDeveloper}/>
+              <Route path="/design" component={GraphicDesign}/>
+              <Route path="/lettering" component={Handletterer}/>
+              <Route path="/me" component={AboutMe}/>
+              <Route path="/" exact component={LinkBox}/>
+            </Switch>
+          </div>
+          <Footer />
         </div>
-        <Footer />
       </div>
     </ThemeContext.Provider>
   );
