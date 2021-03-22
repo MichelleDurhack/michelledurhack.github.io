@@ -84,6 +84,12 @@ $strong-turquoise: #05F2D8;
     font-size: 10vh;
     color: $dark-gradient-color-secondary;
   }
+
+  #devCaption {
+    font-family: "Sacramento", cursive;
+    font-size: 10vh;
+    color: $background-dark;
+  }
 }
 
 /* 
@@ -680,5 +686,21 @@ body {
         color: #0072ff;
       }
     }
+  }
+}
+
+/* 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    WebDeveloper
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+*/
+.textBlock {
+  width: 30vw;
+  display: flex;
+  justify-content: center;
+
+  p {
+    margin-right: 15px;
+    font-family: "Montserrat", sans-serif;
   }
 }
