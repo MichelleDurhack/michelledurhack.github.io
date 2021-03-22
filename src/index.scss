@@ -344,6 +344,7 @@ body {
   min-width: 100%;
   min-height: 100vh;
   display: grid;
+  margin-left: 20px;
   grid-template-columns: repeat(4, 1fr);
   gap: 20px;
   grid-auto-rows: minmax(600px, 1fr);
@@ -375,11 +376,25 @@ body {
     &#vapor1 {
       grid-column: 2;
     }
+
+    &#vapor2{
+      grid-column: 1;
+      grid-row: 2;
+    }
   }
 
   .imageText {
     display: flex;
     align-items: center;
+
+    &.image1 {
+      grid-column: 3;
+    }
+
+    &.image2 {
+      grid-column: 2;
+      grid-row: 2;
+    }
 
     .textBox {
 
@@ -396,10 +411,6 @@ body {
       p {
         font-family: "Montserrat", sans-serif;
         font-size: 2vh;
-      }
-  
-      .image1 {
-        grid-column: 3;
       }
       
     }
