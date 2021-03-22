@@ -98,6 +98,26 @@ const GraphicDesign = () => {
             </div>
           </div>
 
+          <div id="exercise1" className="imageCard">
+            <img alt="something" className="image seriesImage frontfacing" src="media/uebersicht.jpg" />       
+            <div className={`image no6-${theme} backfacing`}></div>
+          </div>
+          <div id="exercise2" className="imageCard">
+            <img alt="something" className="image seriesImage frontfacing" src="media/lernkarte1.jpg" />       
+            <div className={`image no7-${theme} backfacing`}></div>
+          </div>
+          <div id="exercise3" className="imageCard">
+            <img alt="something" className="image seriesImage frontfacing" src="media/lernkarte2.jpg" />       
+            <div className={`image no8-${theme} backfacing`}></div>
+          </div>
+          <div className="imageText image8">
+            <div className="textBox">
+              <span className={`headerText text7-${theme}`}>Work Sample</span>
+              <span className={`subheaderText mainText7-${theme}`}>Graphic Design</span>
+              <p className={`mainText7-${theme}`}>A work sample, created for an apprenticeship position.</p>
+            </div>
+          </div>
+
         </div>
       </div>      
 
