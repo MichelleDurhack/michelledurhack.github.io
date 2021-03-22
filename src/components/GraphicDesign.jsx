@@ -1,10 +1,12 @@
-import { Fragment } from "react";
+import { Fragment, useContext } from "react";
+import { ThemeContext } from './../ThemeContext';
 
 const GraphicDesign = () => {
+  const { theme } = useContext(ThemeContext);
   return (
     <Fragment>
       <div className="headerbox">
-        <h2 id="caption">My Print Works</h2>
+        <h2 id={`designCaption-${theme}`}>My Print Works</h2>
       </div>
 
       <div className="main">

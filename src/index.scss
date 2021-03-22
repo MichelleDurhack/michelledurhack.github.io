@@ -72,9 +72,16 @@ $strong-turquoise: #05F2D8;
     color: $strong-turquoise;
   }
 
-  #caption {
+  #designCaption-light {
     font-family: "Sacramento", cursive;
     font-size: 10vh;
+    color: $background-dark;
+  }
+
+  #designCaption-dark {
+    font-family: "Fascinate", cursive;
+    font-size: 10vh;
+    color: $dark-gradient-color-secondary;
   }
 }
 
