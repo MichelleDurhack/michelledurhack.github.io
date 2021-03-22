@@ -6,6 +6,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Sacramento&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
 
 $gradient-color-primary: #654ea3;
 $gradient-color-secondary: #eaafc8;
@@ -85,10 +86,16 @@ $strong-turquoise: #05F2D8;
     color: $dark-gradient-color-secondary;
   }
 
-  #devCaption {
+  #devCaption-light {
     font-family: "Sacramento", cursive;
     font-size: 10vh;
     color: $background-dark;
+  }
+
+  #devCaption-dark {
+    font-family: 'Audiowide', cursive;
+    font-size: 10vh;
+    color: $megatron-gradient-tertiary;
   }
 }
 
@@ -702,5 +709,13 @@ body {
   p {
     margin-right: 15px;
     font-family: "Montserrat", sans-serif;
+
+    &.textarea-light {
+      color: $background-dark;
+    }
+
+    &.textarea-dark {
+      color: $megatron-gradient-secondary;
+    }
   }
 }
