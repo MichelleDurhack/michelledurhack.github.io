@@ -3,6 +3,10 @@ import { Fragment } from "react";
 const GraphicDesign = () => {
   return (
     <Fragment>
+      <div className="headerbox">
+        <h2 id="caption">My Print Works</h2>
+      </div>
+
       <div className="main">
         <div className="imageGrid">
 
