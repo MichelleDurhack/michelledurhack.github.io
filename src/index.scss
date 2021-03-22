@@ -35,6 +35,7 @@ $strong-turquoise: #05F2D8;
   position: absolute;
   width: 100%;
   height: 100%;
+  overflow-y: auto;
   top: 0;
   left: 0;
   right: 0;
@@ -397,7 +398,14 @@ body {
         top: 25px;
         left: 20px;
         z-index: 1;
-        background-image: linear-gradient(30deg,#a8caba, #5d4157 40%);
+
+        &.double-light {
+          background-image: linear-gradient(30deg,#a8caba, #5d4157 40%);
+        }
+
+        &.double-dark {
+          background-image: linear-gradient(#f12711, #f5af19);
+        }
       }
     }
   
@@ -418,24 +426,44 @@ body {
         left: 20px;
         z-index: 1;
 
-        &.no1 {
-          background-image: linear-gradient(30deg, #B4CBD9, #7794A6, #2C3840)
+        &.no1-light {
+          background-image: linear-gradient(30deg, #B4CBD9, #7794A6, #2C3840);
         }
 
-        &.no2 {
+        &.no1-dark {
+          background-image: linear-gradient(30deg,  #00c3ff, #ffff1c);
+        }
+
+        &.no2-light {
           background-image: linear-gradient(20deg, #355c7d, #6c5b7b, #c06c84);
         }
 
-        &.no3 {
-          background-image: linear-gradient(40deg, #dae2f8, #d6a4a4 ); 
+        &.no2-dark {
+          background-image: linear-gradient(20deg, #fc00ff, #00dbde);
         }
 
-        &.no4 {
+        &.no3-light {
+          background-image: linear-gradient(40deg, #dae2f8, #d6a4a4); 
+        }
+
+        &.no3-dark {
+          background-image: linear-gradient(40deg, #f7ff00 30%, #db36a4); 
+        }
+
+        &.no4-light {
           background-image: linear-gradient(40deg, #ffedbc, #ed4264);
         }
 
-        &.no5 {
+        &.no4-dark {
+          background-image: linear-gradient(40deg, #00c9ff, #92fe9d);
+        }
+
+        &.no5-light {
           background-image: linear-gradient(10deg, #eecda3, #ef629f);
+        }
+
+        &.no5-dark {
+          background-image: linear-gradient(10deg, #8a2387, #e94057, #f27121);
         }
       }
     }
@@ -520,8 +548,39 @@ body {
       .headerText {
         font-family: 'Abril Fatface', cursive;
         font-size: 4vh;
+
+        &.text1-dark {
+          background: linear-gradient(30deg,  #00c3ff, #ffff1c);
+          background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
+        &.text2-dark {
+          background: linear-gradient(20deg, #fc00ff, #00dbde);
+          background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
+        &.text3-dark {
+          background: linear-gradient(40deg, #f7ff00 30%, #db36a4);
+          background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
+        &.text4-dark {
+          background: linear-gradient(40deg, #f12711, #f5af19);
+          background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
+        &.text5-dark {
+          background: linear-gradient(40deg, #00c9ff, #92fe9d);
+          background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
+        &.text6-dark {
+          background: linear-gradient(40deg, #8a2387, #e94057, #f27121);
+          background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
       }
-  
+
       .subheaderText {
         font-family: "Montserrat", sans-serif;
         font-size: 2vh;
@@ -532,6 +591,29 @@ body {
         font-size: 2vh;
       }
       
+      .mainText1-dark {
+        color: #ffff1c;
+      }
+      .mainText2-dark {
+        color: #00dbde;
+      }
+      .mainText3-dark {
+        color: #db36a4;
+      }
+      .mainText4-dark {
+        color: #f5af19;
+      }
+      .mainText5-dark {
+        color: #92fe9d;
+      }
+      .mainText6-dark {
+        color: #f27121;
+      }
     }
   }
 }
+
+
+// background: -webkit-linear-gradient(#eee, #333);
+//   -webkit-background-clip: text;
+//   -webkit-text-fill-color: transparent;
