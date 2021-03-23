@@ -99,6 +99,16 @@ $strong-turquoise: #05F2D8;
   }
 }
 
+.mainpageLink {
+  text-decoration: none;
+  font-family: "Sacramento", cursive;
+  font-size: 5vh;
+
+  &:visited {
+    color: $background-dark;
+  }
+}
+
 /* 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     Links

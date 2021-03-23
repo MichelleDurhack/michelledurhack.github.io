@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Route, Switch } from "react-router-dom";
+import { Route, Switch, NavLink } from "react-router-dom";
 import { ThemeContext } from "./ThemeContext";
 import WebDeveloper from './components/WebDeveloper';
 import GraphicDesign from './components/GraphicDesign';
@@ -15,7 +15,7 @@ function App() {
     <ThemeContext.Provider value={{ theme, setTheme }}>
       <div className={`background bkg-${theme}`}>
         <div className={`content content-${theme}`}>
-          <p>Michelle Durhack</p>
+          <NavLink to="/" className="mainpageLink">Michelle Durhack</NavLink>
           <div className="componentBox">
             <Switch>
               <Route path="/webdev" component={WebDeveloper}/>
