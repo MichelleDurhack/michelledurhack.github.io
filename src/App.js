@@ -15,7 +15,7 @@ function App() {
     <ThemeContext.Provider value={{ theme, setTheme }}>
       <div className={`background bkg-${theme}`}>
         <div className={`content content-${theme}`}>
-          <NavLink to="/" className="mainpageLink">Michelle Durhack</NavLink>
+          <NavLink to="/" className={`mainpageLink homeLink-${theme}`}>Michelle Durhack</NavLink>
           <div className="componentBox">
             <Switch>
               <Route path="/webdev" component={WebDeveloper}/>

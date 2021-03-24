@@ -109,7 +109,7 @@ $strong-turquoise: #05F2D8;
 
   #handletterCaption-dark {
     font-family: "Unica One", cursive;
-    font-size: 12vh;
+    font-size: 10vh;
     color: $megatron-gradient-secondary;
   }
 }
@@ -121,6 +121,14 @@ $strong-turquoise: #05F2D8;
 
   &:visited {
     color: $background-dark;
+  }
+
+  &.homeLink-light {
+    color: $background-dark;
+  }
+
+  &.homeLink-dark {
+    color: $footer-color-dark;
   }
 }
 
