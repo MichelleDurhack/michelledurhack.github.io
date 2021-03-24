@@ -1,4 +1,5 @@
 import React, { useContext } from 'react';
+import { Link } from "react-router-dom";
 import { ThemeContext } from "../ThemeContext";
 
 
@@ -10,9 +11,9 @@ const Footer = () => {
     <div className="main">
       <div className={"footer ftmain-" + theme}>
         <div className={"ftIcons fticons-" + theme}>
-          <span id="fticon-instagram" className="fab fa-instagram icon"></span>
-          <span id="fticon-behance" className="fab fa-behance icon"></span>
-          <span id="fticon-linkedin" className="fab fa-linkedin-in icon"></span>
+          <a href="https://www.instagram.com/thedeadellie/"><span id="fticon-instagram" className="fab fa-instagram icon"></span></a>  
+          <a href="https://www.behance.net/michelledurhack"><span id="fticon-behance" className="fab fa-behance icon"></span></a>
+          <a href="https://www.linkedin.com/in/michelle-durhack-33849520a/"><span id="fticon-linkedin" className="fab fa-linkedin-in icon"></span></a>  
         </div>
         <div className={"ftText fttext-" + theme}>
           <div className={"ftItem ftitem-" + theme} onClick={() => theme === "light" ? setTheme("dark") : setTheme("light")}>

@@ -188,10 +188,18 @@ $strong-turquoise: #05F2D8;
 
     &.fticons-dark {
       color: #F205E2;
+
+      a:visited {
+        color: #F205E2;
+      }
     }
 
     &.fticons-light {
-      color: $background-dark
+      color: $background-dark;
+
+      a:visited {
+        color: $background-dark;
+      }
     }
   }
 
