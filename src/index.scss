@@ -7,6 +7,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Sacramento&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Limelight&display=swap');
 
 $gradient-color-primary: #654ea3;
 $gradient-color-secondary: #eaafc8;
@@ -726,6 +727,142 @@ body {
 
     &.textarea-dark {
       color: $megatron-gradient-secondary;
+    }
+  }
+}
+
+/* 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Handletterer
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+*/
+.letteringGrid {
+  min-width: 100%;
+  min-height: 100vh;
+  display: grid;
+  margin-bottom: 60px;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  grid-auto-rows: minmax(500px, 1fr);
+
+  .letteringCard {
+    position: relative;
+
+    .lettering {
+      width: 600px;
+      position: absolute;
+
+      &.etikette {
+        width: 350px;
+        border-radius: 40px !important;
+      }
+
+      &.frontwards {
+        border-radius: 20px;
+        height: auto;
+        z-index: 2;
+      }
+
+      &.backwards {
+        border-radius: 20px;
+        top: 25px;
+        left: 20px;
+        z-index: 1;
+        background-color: $megatron-gradient-tertiary;
+
+        &#backwards1 {
+          height: 85px;
+        }
+
+        &#backwards2 {
+          height: 170px;
+        }
+
+        &#backwards3 {
+          height: 430px;
+        }
+
+        &.etiketteback {
+          border-radius: 40px;
+          width: 350px;
+          height: 435px;
+        }
+      }
+    }
+
+    &#moodtracker1 {
+      grid-column: 1/2;
+      grid-row: 1;
+      margin-left: 140px;
+      margin-top: 160px;
+    }
+
+    &#moodtracker2 {
+      grid-column: 1/2;
+      grid-row: 2;
+      margin-left: 140px;
+      margin-top: 120px;
+    }
+
+    &#quote1 {
+      grid-column: 2;
+      grid-row: 3;
+      margin-left: 140px;
+    }
+
+    &#worksample1 {
+      margin-top: 20px;
+      grid-column: 2;
+      grid-row: 4;
+    }
+
+    &#worksample2 {
+      margin-top: 20px;
+      grid-column: 3;
+      grid-row: 4;
+    }
+  }
+
+  .letteringText {
+    display: flex;
+    align-items: center;
+
+    &#letteringText1 {
+      grid-column: 3;
+      grid-row: 1;
+    }
+    
+    &#letteringText2 {
+      grid-column: 3;
+      grid-row: 2;
+    }
+
+    &#letteringText3 {
+      grid-column: 4;
+      grid-row: 3;
+    }
+
+    &#letteringText4 {
+      grid-column: 4;
+      grid-row: 4;
+    }
+
+    .letteringBox {
+
+      .letHeader {
+        font-family: 'Limelight', cursive;
+        font-size: 5vh;
+      }
+
+      .letSubheader {
+        font-family: "Montserrat", sans-serif;
+        font-size: 3vh;
+      }
+
+      .letText {
+        font-family: "Montserrat", sans-serif;
+        font-size: 2.5vh;
+      }
     }
   }
 }
