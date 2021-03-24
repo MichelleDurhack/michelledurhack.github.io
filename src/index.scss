@@ -34,17 +34,12 @@ $strong-turquoise: #05F2D8;
   display: flex;
   justify-content: center;
 }
-
+.content {
+  padding-top: 10px;
+}
 .background {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  overflow-y: auto;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-
+  min-height: 100vh;
+  
   &.bkg-light {
     background-color: $background-light;
   }
@@ -114,21 +109,25 @@ $strong-turquoise: #05F2D8;
   }
 }
 
-.mainpageLink {
-  text-decoration: none;
-  font-family: "Sacramento", cursive;
-  font-size: 5vh;
+.nameBox {
+  margin-left: 8px;
 
-  &:visited {
-    color: $background-dark;
-  }
-
-  &.homeLink-light {
-    color: $background-dark;
-  }
-
-  &.homeLink-dark {
-    color: $footer-color-dark;
+  .mainpageLink {
+    text-decoration: none;
+    font-family: "Sacramento", cursive;
+    font-size: 50px;
+  
+    &:visited {
+      color: $background-dark;
+    }
+  
+    &.homeLink-light {
+      color: $background-dark;
+    }
+  
+    &.homeLink-dark {
+      color: $footer-color-dark;
+    }
   }
 }
 
@@ -172,66 +171,79 @@ $strong-turquoise: #05F2D8;
 */
 .icon {
   font-size: 30px;
-  margin-right: 0.3vw;
+  margin-right: 0.5vw;
 }
 
 .footer {
+  padding: 10px 0;
+  display: flex;
   position: fixed;
   bottom: 0;
   right: 0;
   width: 100%;
+  z-index: 3;
 
-  .ftIcons {
-    position: fixed;
-    bottom: 5px;
-    left: 8px;
+  p {
+    margin-block-start: 0;
+    margin-block-end: 0;
+  }
+
+  &.ftmain-light {
+    background-color: white;
+    color: $background-dark;
+  }
+
+  &.ftmain-dark {
+    background-color: $background-dark;
+    color: #F205E2;
+  }
+
+  .ftItem {
+    justify-content: center;
+    font-size: 30px;
+    font-family: "Montserrat", sans-serif;
+
+    .buttonBox {
+      color: unset;
+      border: none;
+      background-color: unset;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      outline: none;
+      cursor: pointer;
+      user-select: none;
+    }
+
+    &.ftIcons {
+      margin-left: 8px;
+      position: fixed;
+    }
 
     &.fticons-dark {
-      color: #F205E2;
-
       a:visited {
+        color: #F205E2;
+      }
+
+      a:link {
         color: #F205E2;
       }
     }
 
     &.fticons-light {
-      color: $background-dark;
-
       a:visited {
+        color: $background-dark;
+      }
+
+      a:link {
         color: $background-dark;
       }
     }
   }
 
-  .ftText {
-    display: flex;
-    justify-content: center;
-    font-size: 30px;
-    font-family: "Montserrat", sans-serif;
-    cursor: pointer;
-    margin-top: auto;
-    margin-bottom: auto;
-
-    .ftItem {
-      margin-top: auto;
-      margin-bottom: auto;
-      margin-right: 1vw;
-
-      &.ftitem-dark {
-        color: #F205E2;
-      }
-    }
-
-    .btn {
-      border: none;
-      outline: none;
-      background-color: none;
-      user-select: none;
-
-      &.btnText-dark {
-        color: #F205E2;
-      }
-    }
+  .ftItem:last-child {
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
@@ -245,165 +257,156 @@ ul {
   padding: 0;
 }
 
-body {
-  margin: 0;
-  padding: 0;
-  display: flex;
-  justify-content: center;
-  min-height: 100vh;
-  height: 100%;
+.container {
+  max-width: 100vw;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 35px;
+  margin: 0 auto;
+  padding: 40px 0;
 
-  .container {
-    max-width: 100vw;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    grid-gap: 35px;
+  .card {
+    position: relative;
+    width: 350px;
+    height: 450px;
     margin: 0 auto;
-    padding: 40px 0;
+    background: $background-dark;
+    border-radius: 15px;
+    box-shadow: 0 15px 60px rgba(0, 0, 0, 0.5);
 
-    .card {
-      position: relative;
-      width: 350px;
-      height: 450px;
-      margin: 0 auto;
-      background: $background-dark;
-      border-radius: 15px;
-      box-shadow: 0 15px 60px rgba(0, 0, 0, 0.5);
+    .face {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      font-family: 'Maven Pro', sans-serif;
+      justify-content: center;
+      align-items: center;
 
-      .face {
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        display: flex;
-        font-family: 'Maven Pro', sans-serif;
-        justify-content: center;
-        align-items: center;
+      &.face1 {
+        box-sizing: border-box;
+        padding: 0 20px;
 
-        &.face1 {
-          box-sizing: border-box;
-          padding: 0 20px;
+        h2 {
+          margin: 0;
+          padding: 0;
+        }
 
-          h2 {
-            margin: 0;
-            padding: 0;
+        .cardcontent {
+
+          .handlettering-light {
+            background-color: $gradient-color-secondary;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
           }
 
-          .cardcontent {
-
-            .handlettering-light {
-              background-color: $gradient-color-secondary;
-              -webkit-background-clip: text;
-              -webkit-text-fill-color: transparent;
-            }
-  
-            .webdev-light {
-              background-color: $gradient-color-secondary;
-              -webkit-background-clip: text;
-              -webkit-text-fill-color: transparent;
-            }
-  
-            .devskills-light {
-              background-color: $gradient-color-secondary;
-              -webkit-background-clip: text;
-              -webkit-text-fill-color: transparent;
-            }
-  
-            .design-light {
-              background-color:  $gradient-color-secondary;
-              -webkit-background-clip: text;
-              -webkit-text-fill-color: transparent;
-            }
-  
-            .handlettering-dark {
-              background-color: $dark-gradient-color-secondary;
-              -webkit-background-clip: text;
-              -webkit-text-fill-color: transparent;
-            }
-  
-            .webdev-dark {
-              background-color: $dark-gradient-color-secondary;
-              -webkit-background-clip: text;
-              -webkit-text-fill-color: transparent;
-            }
-  
-            .devskills-dark {
-              background-color: $dark-gradient-color-secondary;
-              -webkit-background-clip: text;
-              -webkit-text-fill-color: transparent;
-            }
-  
-            .design-dark {
-              background-color: $dark-gradient-color-secondary;
-              -webkit-background-clip: text;
-              -webkit-text-fill-color: transparent;
-            }
-          }
+          .webdev-light {
+            background-color: $gradient-color-secondary;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
           }
 
-        &.face2 {
+          .devskills-light {
+            background-color: $gradient-color-secondary;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+          }
+
+          .design-light {
+            background-color:  $gradient-color-secondary;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+          }
+
+          .handlettering-dark {
+            background-color: $dark-gradient-color-secondary;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+          }
+
+          .webdev-dark {
+            background-color: $dark-gradient-color-secondary;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+          }
+
+          .devskills-dark {
+            background-color: $dark-gradient-color-secondary;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+          }
+
+          .design-dark {
+            background-color: $dark-gradient-color-secondary;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+          }
+        }
+        }
+
+      &.face2 {
+        transition: 0.5s;
+
+        h2 {
+          margin: 0;
+          padding: 0;
+          font-size: 10em;
+          color: #fff;
           transition: 0.5s;
-
-          h2 {
-            margin: 0;
-            padding: 0;
-            font-size: 10em;
-            color: #fff;
-            transition: 0.5s;
-            text-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-            z-index: 10;
-          }
+          text-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+          z-index: 10;
         }
       }
     }
+  }
 
-    .card:hover .face.face2 {
-      height: 60px;
+  .card:hover .face.face2 {
+    height: 60px;
 
-      h2 {
-        font-size: 2em;
-      }
+    h2 {
+      font-size: 2em;
     }
+  }
 
-    .card:nth-child(1) .face.face2-light {
-      background: linear-gradient(40deg, $gradient-color-secondary 20%, $gradient-color-primary);
-      border-radius: 15px;
-    }
+  .card:nth-child(1) .face.face2-light {
+    background: linear-gradient(40deg, $gradient-color-secondary 20%, $gradient-color-primary);
+    border-radius: 15px;
+  }
 
-    .card:nth-child(2) .face.face2-light {
-      background: linear-gradient(40deg,  $gradient-color-primary 60%, $gradient-color-secondary);
-      border-radius: 15px;
-    }
+  .card:nth-child(2) .face.face2-light {
+    background: linear-gradient(40deg,  $gradient-color-primary 60%, $gradient-color-secondary);
+    border-radius: 15px;
+  }
 
-    .card:nth-child(3) .face.face2-light {
-      background: linear-gradient(40deg,  $gradient-color-primary, $gradient-color-secondary);
-      border-radius: 15px;
-    }
+  .card:nth-child(3) .face.face2-light {
+    background: linear-gradient(40deg,  $gradient-color-primary, $gradient-color-secondary);
+    border-radius: 15px;
+  }
 
-    .card:nth-child(4) .face.face2-light {
-      background: linear-gradient(40deg,  $gradient-color-secondary 40%, $gradient-color-primary);
-      border-radius: 15px;
-    }
+  .card:nth-child(4) .face.face2-light {
+    background: linear-gradient(40deg,  $gradient-color-secondary 40%, $gradient-color-primary);
+    border-radius: 15px;
+  }
 
-    .card:nth-child(1) .face.face2-dark {
-      background: linear-gradient(40deg, $dark-gradient-color-secondary 20%, $dark-gradient-color-primary);
-      border-radius: 15px;
-    }
+  .card:nth-child(1) .face.face2-dark {
+    background: linear-gradient(40deg, $dark-gradient-color-secondary 20%, $dark-gradient-color-primary);
+    border-radius: 15px;
+  }
 
-    .card:nth-child(2) .face.face2-dark {
-      background: linear-gradient(40deg,  $dark-gradient-color-primary 60%, $dark-gradient-color-secondary);
-      border-radius: 15px;
-    }
+  .card:nth-child(2) .face.face2-dark {
+    background: linear-gradient(40deg,  $dark-gradient-color-primary 60%, $dark-gradient-color-secondary);
+    border-radius: 15px;
+  }
 
-    .card:nth-child(3) .face.face2-dark {
-      background: linear-gradient(40deg,  $dark-gradient-color-primary, $dark-gradient-color-secondary);
-      border-radius: 15px;
-    }
-    .card:nth-child(4) .face.face2-dark {
-      background: linear-gradient(40deg,  $dark-gradient-color-secondary 40%, $dark-gradient-color-primary);
-      border-radius: 15px;
-    }
+  .card:nth-child(3) .face.face2-dark {
+    background: linear-gradient(40deg,  $dark-gradient-color-primary, $dark-gradient-color-secondary);
+    border-radius: 15px;
+  }
+  .card:nth-child(4) .face.face2-dark {
+    background: linear-gradient(40deg,  $dark-gradient-color-secondary 40%, $dark-gradient-color-primary);
+    border-radius: 15px;
   }
 }
 
@@ -578,12 +581,12 @@ body {
     }
 
     &#article1 {
-      grid-column: 2/3;
+      grid-column: 1/2;
       grid-row: 3;
     }
 
     &#article2 {
-      grid-column: 2/3;
+      grid-column: 1/2;
       grid-row: 4;
     }
 
@@ -634,12 +637,12 @@ body {
     } 
 
     &.image4 {
-      grid-column: 4;
+      grid-column: 3;
       grid-row: 3;
     }
 
     &.image5 {
-      grid-column: 4;
+      grid-column: 3;
       grid-row: 4;
     }
 
@@ -851,20 +854,21 @@ body {
     }
 
     &#quote1 {
-      grid-column: 2;
+      grid-column: 1;
       grid-row: 3;
       margin-left: 140px;
     }
 
     &#worksample1 {
       margin-top: 20px;
-      grid-column: 2;
+      margin-left: 30px;
+      grid-column: 1;
       grid-row: 4;
     }
 
     &#worksample2 {
       margin-top: 20px;
-      grid-column: 3;
+      grid-column: 2;
       grid-row: 4;
     }
   }
@@ -884,12 +888,12 @@ body {
     }
 
     &#letteringText3 {
-      grid-column: 4;
+      grid-column: 3;
       grid-row: 3;
     }
 
     &#letteringText4 {
-      grid-column: 4;
+      grid-column: 3;
       grid-row: 4;
     }
 

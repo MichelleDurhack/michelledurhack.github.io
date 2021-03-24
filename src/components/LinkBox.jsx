@@ -18,7 +18,7 @@ const LinkBox = () => {
             <Link to="/design"> GRAPHIC DESIGNER</Link>
           </li>
           <li className="links-list-item">
-            <Link to="/webdev">FULLSTACK WEBDEVELOPER</Link>
+            <Link to="/webdev">FULLSTACK WEB DEVELOPER</Link>
           </li>
         </ul>
       </div>

@@ -6,7 +6,7 @@ const AboutMe = () => {
   return (
     <Fragment>
       <div className="headerbox">
-        <h2 id={`aboutCaption-${theme}`}>About my skills</h2>
+        <h2 id={`aboutCaption-${theme}`}>My skills</h2>
       </div>
 
       <div className="main">
