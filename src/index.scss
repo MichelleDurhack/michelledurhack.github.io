@@ -138,6 +138,7 @@ $strong-turquoise: #05F2D8;
 */
 .links {
   font-size: 100px;
+  z-index: 2;
 
   .links-list {
     list-style: none;
@@ -936,6 +937,44 @@ ul {
       .letText {
         font-family: "Montserrat", sans-serif;
         font-size: 2vh;
+      }
+    }
+  }
+}
+
+/* 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    SVGs
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+*/
+.koiStyle {
+  .svg-koi {
+    height: 700px;
+    width: auto;
+    position: fixed;
+    top: 150px;
+    left: 50px;
+    z-index: 1;
+  }
+
+  &.koiStyle-light {
+    .svg-koi {
+      .svg-koi-primary {
+        fill: #F28891;
+      }
+      .svg-koi-accent {
+        fill: #262626;;
+      }
+    }
+  }
+
+  &.koiStyle-dark {
+    .svg-koi {
+      .svg-koi-primary {
+        fill: #F18DF2;
+      }
+      .svg-koi-accent {
+        fill:  #64F4E6;
       }
     }
   }
