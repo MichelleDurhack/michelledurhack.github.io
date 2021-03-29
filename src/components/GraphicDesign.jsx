@@ -118,6 +118,18 @@ const GraphicDesign = () => {
             </div>
           </div>
 
+          <div id="graphic1" className="imageCard">
+            <img alt="something" className="image frontfacing" src="media/girlcollage.png" />         
+            <div className={`image no9-${theme} backfacing`}></div>
+          </div>
+          <div className="imageText image9">
+            <div className="textBox">
+              <span className={`headerText text8-${theme}`}>Free Work</span>
+              <span className={`subheaderText mainText8-${theme}`}>Vaporwave</span>
+              <p className={`mainText8-${theme}`}>A collage inspired by Graphic Designer Magdiel Lopez.</p>
+            </div>
+          </div>
+
         </div>
       </div>      
 
