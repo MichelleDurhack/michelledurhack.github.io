@@ -7,7 +7,6 @@ import Handletterer from './components/Handletterer';
 import AboutMe from './components/AboutMe';
 import LinkBox from './components/LinkBox';
 import Footer from './components/Footer';
-import { ReactComponent as Koi } from "./svg/Koi.svg";
 
 function App() {
   const [ theme, setTheme ] = useState("light");
@@ -29,10 +28,7 @@ function App() {
           </div>
           <Footer />
         </div>
-      </div>
-      <div className={`koiStyle koiStyle-${theme}`}>
-        <Koi />
-      </div>  
+      </div> 
     </ThemeContext.Provider>
   );
 }

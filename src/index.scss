@@ -979,3 +979,40 @@ ul {
     }
   }
 }
+
+.monsteraStyle {
+  .svg-monstera {
+    position: fixed;
+    bottom: 40px;
+    right: -20px;
+    height: 600px;
+    width: auto;
+  }
+
+  &.monsteraStyle-light {
+    .svg-monstera {
+      .svg-monstera-primary {
+        fill: #01401C;
+      }
+  
+      .svg-monstera-accent {
+        fill: #012611;
+      }
+    }
+  }
+  &.monsteraStyle-dark {
+    .svg-monstera {
+      .svg-monstera-primary {
+        stroke: $megatron-gradient-tertiary;
+        stroke-width: 5px;
+        fill: $background-dark;
+      }
+  
+      .svg-monstera-accent {
+        stroke: $megatron-gradient-secondary;
+        stroke-width: 3px;
+        fill: $background-dark;
+      }
+    }
+  }
+}

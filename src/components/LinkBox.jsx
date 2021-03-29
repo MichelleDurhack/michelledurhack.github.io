@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { Link } from "react-router-dom";
 import { ThemeContext } from './../ThemeContext';
+import { ReactComponent as Koi } from "../svg/Koi.svg";
 
 const LinkBox = () => {
   const { theme } = useContext(ThemeContext);
@@ -21,6 +22,9 @@ const LinkBox = () => {
             <Link to="/webdev">FULLSTACK WEB DEVELOPER</Link>
           </li>
         </ul>
+      </div>
+      <div className={`koiStyle koiStyle-${theme}`}>
+        <Koi />
       </div>
     </div>
   );
