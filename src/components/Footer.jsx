@@ -10,10 +10,10 @@ const Footer = () => {
     <div className="main">
       <div className={"footer ftmain-" + theme}>
         <div className={"ftItem ftIcons fticons-" + theme}>
-          <a href="https://www.linkedin.com/in/michelle-durhack-33849520a/"><span id="fticon-linkedin" className="fab fa-linkedin-in icon"></span></a> 
-          <a href="https://www.behance.net/michelledurhack"><span className="fab fa-behance icon"></span></a>
-          <a href="https://www.instagram.com/thedeadellie/"><span className="fab fa-instagram icon"></span></a>
-          <a href="https://github.com/MichelleDurhack"><span className="fab fa-github"></span></a>
+          <a href="https://www.linkedin.com/in/michelle-durhack-33849520a/"><span id="fticon-linkedin icon-top1" className="fab fa-linkedin-in icon"></span></a> 
+          <a href="https://www.behance.net/michelledurhack"><span id="icon-top2" className="fab fa-behance icon"></span></a>
+          <a href="https://www.instagram.com/thedeadellie/"><span id="icon-bottom1" className="fab fa-instagram icon"></span></a>
+          <a href="https://github.com/MichelleDurhack"><span id="icon-bottom2" className="fab fa-github icon-bottom"></span></a>
         </div>
         <div className={"ftItem"}>
           <button name="Dark mode" className="buttonBox" onClick={() => theme === "light" ? setTheme("dark") : setTheme("light")}>
