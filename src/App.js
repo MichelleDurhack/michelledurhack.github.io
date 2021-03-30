@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Route, Switch, NavLink as Link } from "react-router-dom";
 import { ThemeContext } from "./ThemeContext";
 import WebDeveloper from './components/WebDeveloper';
@@ -10,7 +10,28 @@ import Footer from './components/Footer';
 import { ReactComponent as NameIcon } from "./svg/Name.svg";
 
 function App() {
-  const [ theme, setTheme ] = useState("light");
+  let storage = "";
+  if (localStorage.getItem("darkmode") === "true") {
+    storage = "dark";
+  }
+  else {
+    storage = "light"
+  }
+
+  const [ theme, setTheme ] = useState(storage);
+
+  useEffect(
+    () => {
+      if (theme === "light") {
+        localStorage.setItem("darkmode", false);
+      }
+      else {
+        localStorage.setItem("darkmode", true);
+      }
+    },
+    [theme]
+  )
+
   return (
     <ThemeContext.Provider value={{ theme, setTheme }}>
       <div className={`background bkg-${theme}`}>
