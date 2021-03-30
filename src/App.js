@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Route, Switch, NavLink } from "react-router-dom";
+import { Route, Switch, NavLink as Link } from "react-router-dom";
 import { ThemeContext } from "./ThemeContext";
 import WebDeveloper from './components/WebDeveloper';
 import GraphicDesign from './components/GraphicDesign';
@@ -7,6 +7,7 @@ import Handletterer from './components/Handletterer';
 import AboutMe from './components/AboutMe';
 import LinkBox from './components/LinkBox';
 import Footer from './components/Footer';
+import { ReactComponent as NameIcon } from "./svg/Name.svg";
 
 function App() {
   const [ theme, setTheme ] = useState("light");
@@ -14,8 +15,8 @@ function App() {
     <ThemeContext.Provider value={{ theme, setTheme }}>
       <div className={`background bkg-${theme}`}>
         <div className="content">
-          <div className="nameBox">
-            <NavLink to="/" className={`mainpageLink homeLink-${theme}`}>Michelle Durhack</NavLink>
+          <div className={`nameBox nameStyle-${theme}`}>
+            <Link to="/" className="homeLink"><NameIcon/></Link>
           </div>
           <div className="componentBox">
             <Switch>

@@ -110,26 +110,42 @@ $strong-turquoise: #05F2D8;
 }
 
 .nameBox {
-  margin-left: 8px;
+  position: absolute;
+  left: 8px;
+  top: 3px;
+  width: 280px;
+  height: auto;
 
-  .mainpageLink {
-    text-decoration: none;
-    font-family: "Sacramento", cursive;
-    font-size: 50px;
-  
-    &:visited {
-      color: $background-dark;
+  &.nameStyle-light {
+    a {
+      .svg-name {
+        fill: $background-dark;
+      }
     }
-  
-    &.homeLink-light {
-      color: $background-dark;
-    }
-  
-    &.homeLink-dark {
-      color: $footer-color-dark;
+  }
+  &.nameStyle-dark {
+    a {
+      .svg-name {
+        fill: #F205E2;
+      }
     }
   }
 }
+
+// .nameBox {
+//   position: fixed;
+//   left: 8px;
+//   width: 280px;
+//   height: auto;
+
+//   &.homeLink-light {
+//     a {
+//       .svg-name-primary {
+//         fill: pink
+//       }
+//     }
+//   }
+// }
 
 /* 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -139,6 +155,7 @@ $strong-turquoise: #05F2D8;
 .links {
   font-size: 100px;
   z-index: 2;
+  padding-top: 100px;
 
   .links-list {
     list-style: none;
@@ -879,7 +896,7 @@ ul {
       grid-column: 1/2;
       grid-row: 2;
       margin-left: 140px;
-      margin-top: 120px;
+      margin-top: 60px;
     }
 
     &#quote1 {
@@ -914,6 +931,7 @@ ul {
     &#letteringText2 {
       grid-column: 3;
       grid-row: 2;
+      margin-bottom: 150px;
     }
 
     &#letteringText3 {
