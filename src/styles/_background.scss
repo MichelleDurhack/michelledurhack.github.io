@@ -1,0 +1,26 @@
+/* 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Background
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+*/
+body {
+  background-color: $background-dark;
+}
+.main {
+  display: flex;
+  justify-content: center;
+}
+.content {
+  padding-top: 10px;
+}
+.background {
+  min-height: 100vh;
+  
+  &.bkg-light {
+    background-color: $background-light;
+  }
+
+  &.bkg-dark {
+    background-color: $background-dark;
+  }
+}

@@ -1,0 +1,177 @@
+/* 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Handletterer
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+*/
+.letteringGrid {
+  min-width: 100%;
+  min-height: 100vh;
+  display: grid;
+  margin-bottom: 100px;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  grid-auto-rows: minmax(500px, 1fr);
+
+  .letteringCard {
+    position: relative;
+
+    .lettering {
+      width: 600px;
+      position: absolute;
+
+      &.etikette {
+        width: 350px;
+        border-radius: 40px !important;
+      }
+
+      &.frontwards {
+        border-radius: 20px;
+        height: auto;
+        z-index: 2;
+      }
+
+      &.backwards {
+        border-radius: 20px;
+        top: 25px;
+        left: 20px;
+        z-index: 1;
+
+        &.journal-light {
+          //#6D6D7F
+          background-image: linear-gradient(40deg, #a6a1d3, #fab4cf);
+        }
+
+        &.journal-dark {
+          background-image: linear-gradient(40deg, #aaffa9, #11ffbd);
+        }
+
+        &.etikette-light {
+          background-image: linear-gradient(40deg, #df7255 60%, #d0cdbd);
+        }
+
+        &.etikette-dark {
+          background-image: linear-gradient(40deg, #dd3e54 60%, #6be585);
+        }
+        
+        &#backwards1 {
+          height: 85px;
+        }
+
+        &#backwards2 {
+          height: 170px;
+        }
+
+        &#backwards3 {
+          height: 435px;
+        }
+
+        &.etiketteback {
+          border-radius: 40px;
+          width: 350px;
+          height: 435px;
+        }
+      }
+    }
+
+    &#moodtracker1 {
+      grid-column: 1/2;
+      grid-row: 1;
+      margin-left: 140px;
+      margin-top: 160px;
+    }
+
+    &#moodtracker2 {
+      grid-column: 1/2;
+      grid-row: 2;
+      margin-left: 140px;
+      margin-top: 60px;
+    }
+
+    &#quote1 {
+      grid-column: 1;
+      grid-row: 3;
+      margin-left: 140px;
+    }
+
+    &#worksample1 {
+      margin-top: 20px;
+      margin-left: 30px;
+      grid-column: 1;
+      grid-row: 4;
+    }
+
+    &#worksample2 {
+      margin-top: 20px;
+      grid-column: 2;
+      grid-row: 4;
+    }
+  }
+
+  .letteringText {
+    display: flex;
+    align-items: center;
+
+    &#letteringText1 {
+      grid-column: 3;
+      grid-row: 1;
+    }
+    
+    &#letteringText2 {
+      grid-column: 3;
+      grid-row: 2;
+      margin-bottom: 150px;
+    }
+
+    &#letteringText3 {
+      grid-column: 3;
+      grid-row: 3;
+    }
+
+    &#letteringText4 {
+      grid-column: 3;
+      grid-row: 4;
+    }
+
+    .letteringBox {
+
+      &.journalText-light {
+        color: $background-dark;
+      }
+
+      &.journalText-dark {
+        color: #11ffbd;
+      }
+
+      &.etiketteText-dark {
+        color: #11ffbd;
+      }
+
+      .letHeader {
+        font-family: 'Limelight', cursive;
+        font-size: 4vh;
+
+        &.journalHeader-dark {
+          background-image: linear-gradient(40deg, #aaffa9, #11ffbd);
+          background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
+
+        &.etiketteHeader-dark {
+          background-image: linear-gradient(40deg, #dd3e54 20%, #6be585);
+          background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
+      }
+
+      .letSubheader {
+        font-family: "Montserrat", sans-serif;
+        font-size: 2vh;
+      }
+
+      .letText {
+        font-family: "Montserrat", sans-serif;
+        font-size: 2vh;
+      }
+    }
+  }
+}

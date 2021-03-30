@@ -1,0 +1,82 @@
+/* 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Footer
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+*/
+.icon {
+  font-size: 30px;
+  margin-right: 0.5vw;
+}
+
+.footer {
+  padding: 10px 0;
+  display: flex;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  z-index: 3;
+
+  p {
+    margin-block-start: 0;
+    margin-block-end: 0;
+  }
+
+  &.ftmain-light {
+    background-color: white;
+    color: $background-dark;
+  }
+
+  &.ftmain-dark {
+    background-color: $background-dark;
+    color: #F205E2;
+  }
+
+  .ftItem {
+    justify-content: center;
+    font-size: 30px;
+    font-family: "Montserrat", sans-serif;
+
+    .buttonBox {
+      color: unset;
+      border: none;
+      background-color: unset;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      outline: none;
+      cursor: pointer;
+      user-select: none;
+    }
+
+    &.ftIcons {
+      margin-left: 8px;
+      position: fixed;
+    }
+
+    &.fticons-dark {
+      a:visited {
+        color: #F205E2;
+      }
+
+      a:link {
+        color: #F205E2;
+      }
+    }
+
+    &.fticons-light {
+      a:visited {
+        color: $background-dark;
+      }
+
+      a:link {
+        color: $background-dark;
+      }
+    }
+  }
+
+  .ftItem:last-child {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

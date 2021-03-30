@@ -1,0 +1,23 @@
+/* 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    WebDeveloper
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+*/
+.textBlock {
+  width: 30vw;
+  display: flex;
+  justify-content: center;
+
+  p {
+    margin-right: 15px;
+    font-family: "Montserrat", sans-serif;
+
+    &.textarea-light {
+      color: $background-dark;
+    }
+
+    &.textarea-dark {
+      color: $megatron-gradient-secondary;
+    }
+  }
+}

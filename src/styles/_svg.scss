@@ -1,0 +1,74 @@
+/* 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    SVGs
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+*/
+.koiStyle {
+  .svg-koi {
+    height: 700px;
+    width: auto;
+    position: fixed;
+    top: 150px;
+    left: 50px;
+    z-index: 1;
+  }
+
+  &.koiStyle-light {
+    .svg-koi {
+      .svg-koi-primary {
+        fill: #F28891;
+      }
+      .svg-koi-accent {
+        fill: #262626;;
+      }
+    }
+  }
+
+  &.koiStyle-dark {
+    .svg-koi {
+      .svg-koi-primary {
+        fill: #F18DF2;
+      }
+      .svg-koi-accent {
+        fill:  #64F4E6;
+      }
+    }
+  }
+}
+
+.monsteraStyle {
+  .svg-monstera {
+    position: fixed;
+    bottom: 40px;
+    right: -20px;
+    height: 600px;
+    width: auto;
+  }
+
+  &.monsteraStyle-light {
+    .svg-monstera {
+      .svg-monstera-primary {
+        fill: #01401C;
+      }
+  
+      .svg-monstera-accent {
+        fill: #012611;
+      }
+    }
+  }
+  &.monsteraStyle-dark {
+    .svg-monstera {
+      .svg-monstera-primary {
+        stroke: $megatron-gradient-tertiary;
+        stroke-width: 5px;
+        fill: $background-dark;
+      }
+  
+      .svg-monstera-accent {
+        stroke: $megatron-gradient-secondary;
+        stroke-width: 3px;
+        fill: $background-dark;
+      }
+    }
+  }
+}
