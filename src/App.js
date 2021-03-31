@@ -1,13 +1,8 @@
 import { useEffect, useState } from 'react';
-import { Route, Switch, NavLink as Link } from "react-router-dom";
 import { ThemeContext } from "./ThemeContext";
-import WebDeveloper from './components/WebDeveloper';
-import GraphicDesign from './components/GraphicDesign';
-import Handletterer from './components/Handletterer';
-import AboutMe from './components/AboutMe';
-import LinkBox from './components/LinkBox';
-import Footer from './components/Footer';
-import { ReactComponent as NameIcon } from "./svg/Name.svg";
+import BigScreens from "./components/BigScreens";
+import SmallScreens from "./components/SmallScreens";
+
 
 function App() {
   let storage = "";
@@ -17,6 +12,19 @@ function App() {
   else {
     storage = "light"
   }
+
+  const [isDesktop, setDesktop] = useState(window.innerWidth > 599);
+
+  const updateMedia = () => {
+    setDesktop(window.innerWidth > 599);
+  };
+
+  useEffect(() => {
+    window.addEventListener("resize", updateMedia);
+    return () => window.removeEventListener("resize", updateMedia);
+  });
+
+  console.log(isDesktop);
 
   const [ theme, setTheme ] = useState(storage);
 
@@ -34,23 +42,7 @@ function App() {
 
   return (
     <ThemeContext.Provider value={{ theme, setTheme }}>
-      <div className={`background bkg-${theme}`}>
-        <div className="content">
-          <div className={`nameBox nameStyle-${theme}`}>
-            <Link to="/" className="homeLink"><NameIcon/></Link>
-          </div>
-          <div className="componentBox">
-            <Switch>
-              <Route path="/webdev" component={WebDeveloper}/>
-              <Route path="/design" component={GraphicDesign}/>
-              <Route path="/lettering" component={Handletterer}/>
-              <Route path="/me" component={AboutMe}/>
-              <Route path="/" exact component={LinkBox}/>
-            </Switch>
-          </div>
-          <Footer />
-        </div>
-      </div> 
+      {isDesktop ? <BigScreens/> : <SmallScreens />}
     </ThemeContext.Provider>
   );
 }
