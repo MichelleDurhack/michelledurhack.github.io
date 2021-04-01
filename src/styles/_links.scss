@@ -3,32 +3,131 @@
     Links
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 */
-.links {
-  font-size: 100px;
-  z-index: 2;
-  padding-top: 100px;
-
-  .links-list {
-    list-style: none;
-
-    a {
-      text-decoration: none;
+@media only screen and (min-width: 1400px) {
+  .links {
+    font-size: 6vw;
+    z-index: 2;
+    padding-top: 8vh;
+  
+    .links-list {
+      list-style: none;
+  
+      a {
+        text-decoration: none;
+      }
+    }
+  
+    &.links-light {
+      font-family: 'Maven Pro', sans-serif;
+  
+      a {
+        color: grey;
+      }
+    }
+  
+    &.links-dark {
+      font-family: 'JetBrains Mono', monospace;
+  
+      a {
+        color: #1BF2DD;
+      }
     }
   }
+}
 
-  &.links-light {
-    font-family: 'Maven Pro', sans-serif;
-
-    a {
-      color: grey;
+@media only screen and (min-width: 992px) and (max-width: 1399px) {
+  .links {
+    font-size: 5vw;
+    z-index: 2;
+    padding-top: 20vh;
+    margin-right: 50px;
+  
+    .links-list {
+      list-style: none;
+  
+      a {
+        text-decoration: none;
+      }
+    }
+  
+    &.links-light {
+      font-family: 'Maven Pro', sans-serif;
+  
+      a {
+        color: grey;
+      }
+    }
+  
+    &.links-dark {
+      font-family: 'JetBrains Mono', monospace;
+  
+      a {
+        color: #1BF2DD;
+      }
     }
   }
+}
 
-  &.links-dark {
-    font-family: 'JetBrains Mono', monospace;
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .links {
+    font-size: 6vw;
+    z-index: 2;
+    padding-top: 30vh;
+  
+    .links-list {
+      list-style: none;
+  
+      a {
+        text-decoration: none;
+      }
+    }
+  
+    &.links-light {
+      font-family: 'Maven Pro', sans-serif;
+  
+      a {
+        color: grey;
+      }
+    }
+  
+    &.links-dark {
+      font-family: 'JetBrains Mono', monospace;
+  
+      a {
+        color: #1BF2DD;
+      }
+    }
+  }
+}
 
-    a {
-      color: #1BF2DD;
+@media only screen and (min-width: 600px) and (max-width: 767px) {
+  .links {
+    font-size: 7.5vw;
+    z-index: 2;
+    padding-top: 100px;
+  
+    .links-list {
+      list-style: none;
+  
+      a {
+        text-decoration: none;
+      }
+    }
+  
+    &.links-light {
+      font-family: 'Maven Pro', sans-serif;
+  
+      a {
+        color: grey;
+      }
+    }
+  
+    &.links-dark {
+      font-family: 'JetBrains Mono', monospace;
+  
+      a {
+        color: #1BF2DD;
+      }
     }
   }
 }
