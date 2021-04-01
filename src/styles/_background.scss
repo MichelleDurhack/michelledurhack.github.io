@@ -9,12 +9,18 @@ body {
 .main {
   display: flex;
   justify-content: center;
+  margin: 0;
 }
 .content {
   padding-top: 10px;
 }
 .background {
-  min-height: 100vh;
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  z-index: 0;
   
   &.bkg-light {
     background-color: $background-light;
