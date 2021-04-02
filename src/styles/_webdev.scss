@@ -3,21 +3,94 @@
     WebDeveloper
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 */
-.textBlock {
-  width: 30vw;
-  display: flex;
-  justify-content: center;
-
-  p {
-    margin-right: 15px;
-    font-family: "Montserrat", sans-serif;
-
-    &.textarea-light {
-      color: $background-dark;
-    }
-
-    &.textarea-dark {
-      color: $megatron-gradient-secondary;
+@media only screen and (min-width: 1400px) {
+  .textBlock {
+    width: 30vw;
+    display: flex;
+    justify-content: center;
+  
+    p {
+      margin-right: 15px;
+      font-family: "Montserrat", sans-serif;
+  
+      &.textarea-light {
+        color: $background-dark;
+      }
+  
+      &.textarea-dark {
+        color: $megatron-gradient-secondary;
+      }
     }
   }
 }
+
+@media only screen and (min-width: 992px) and (max-width: 1399px) {
+  .textBlock {
+    width: 50vw;
+    display: flex;
+    justify-content: center;
+  
+    p {
+      margin-right: 15px;
+      font-family: "Montserrat", sans-serif;
+  
+      &.textarea-light {
+        color: $background-dark;
+      }
+  
+      &.textarea-dark {
+        color: $megatron-gradient-secondary;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .textBlock {
+    width: 80vw;
+    display: flex;
+    justify-content: center;
+  
+    p {
+      margin-right: 15px;
+      font-family: "Montserrat", sans-serif;
+  
+      &.textarea-light {
+        color: $background-dark;
+      }
+  
+      &.textarea-dark {
+        color: $megatron-gradient-secondary;
+      }
+    }
+  }
+  #devCaption-dark {
+    padding: 40px 0;
+  }
+}
+
+@media only screen and (min-width: 600px) and (max-width: 767px) {
+  .textBlock {
+    width: 80vw;
+    display: flex;
+    justify-content: center;
+  
+    p {
+      margin-right: 15px;
+      font-family: "Montserrat", sans-serif;
+  
+      &.textarea-light {
+        color: $background-dark;
+      }
+  
+      &.textarea-dark {
+        color: $megatron-gradient-secondary;
+      }
+    }
+  }
+  #devCaption-dark {
+    padding: 40px 0;
+  }
+}
+
+// @media only screen and (min-width: 330px) and (max-width: 599px)
