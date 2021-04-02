@@ -49,12 +49,14 @@
     font-family: "Sacramento", cursive;
     font-size: 10vh;
     color: $background-dark;
+    padding-top: 50px;
   }
 
   #handletterCaption-dark {
     font-family: "Unica One", cursive;
     font-size: 10vh;
     color: $megatron-gradient-secondary;
+    padding-top: 50px;
   }
 }
 
@@ -80,4 +82,9 @@
       }
     }
   }
+}
+
+ul {
+  list-style: none;
+  padding: 0;
 }
