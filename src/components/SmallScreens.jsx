@@ -1,5 +1,5 @@
 import { NavLink as Link } from "react-router-dom";
-import { useContext } from "react";
+import { Fragment, useContext } from "react";
 import { ThemeContext } from "../ThemeContext";
 import { ReactComponent as NameIcon } from "../svg/Name.svg";
 import WebDeveloper from './WebDeveloper';
@@ -11,12 +11,13 @@ import Footer from './Footer';
 const SmallScreens = () => {
   const { theme } = useContext(ThemeContext);
   return (
-    <div className={`background bkg-${theme}`}>
+    <Fragment>
       <div className="content">
         <div className={`nameBox nameStyle-${theme}`}>
           <Link to="/" className="homeLink"><NameIcon/></Link>
         </div>
         <div className="componentBox">
+          <div className="placeholder"></div>
           <AboutMe />
           <Handletterer />
           <GraphicDesign />
@@ -24,7 +25,8 @@ const SmallScreens = () => {
         </div>
         <Footer />
       </div>
-    </div> 
+      <div className={`background bkg-${theme}`}></div> 
+    </Fragment>
   );
 }
  
