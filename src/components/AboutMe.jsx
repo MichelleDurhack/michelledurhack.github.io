@@ -12,7 +12,7 @@ const AboutMe = () => {
       <div className="main">
         <div className="container">
 
-        <div className="card">
+        <div className="card card1">
           <div className="face face1">
             <div className="cardcontent">
               <h2 className={`handlettering-${theme}`}>Handlettering</h2>
@@ -29,7 +29,7 @@ const AboutMe = () => {
           </div>
         </div>
 
-        <div className="card">
+        <div className="card card2">
           <div className="face face1">
             <div className="cardcontent">
               <h2 className={`webdev-${theme}`}>Web Development</h2>
@@ -51,7 +51,7 @@ const AboutMe = () => {
           </div>
         </div>
 
-        <div className="card">
+        <div className="card card3">
           <div className="face face1">
             <div className="cardcontent">
               <h2 className={`devskills-${theme}`}>Development Skills</h2>
@@ -70,7 +70,7 @@ const AboutMe = () => {
           </div>
         </div>
 
-        <div className="card">
+        <div className="card card4">
           <div className="face face1">
             <div className="cardcontent">
               <h2 className={`design-${theme}`}>Design</h2>
