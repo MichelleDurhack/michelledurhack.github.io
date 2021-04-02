@@ -3,88 +3,349 @@
     Headers
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 */
-.headerbox {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  padding: 0;
-
-  h2#aboutCaption-light {
-    font-family: 'Sacramento', cursive;
-    font-size: 10vh;
-    color: $background-dark;
-  }
-
-  h2#aboutCaption-dark {
-    font-family: 'Abril Fatface', cursive;
-    font-size: 10vh;
-    color: $strong-turquoise;
-  }
-
-  #designCaption-light {
-    font-family: "Sacramento", cursive;
-    font-size: 10vh;
-    color: $background-dark;
-  }
-
-  #designCaption-dark {
-    font-family: "Fascinate", cursive;
-    font-size: 10vh;
-    color: $dark-gradient-color-secondary;
-  }
-
-  #devCaption-light {
-    font-family: "Sacramento", cursive;
-    font-size: 10vh;
-    color: $background-dark;
-  }
-
-  #devCaption-dark {
-    font-family: 'Audiowide', cursive;
-    font-size: 10vh;
-    color: $megatron-gradient-tertiary;
-  }
-
-  #handletterCaption-light {
-    font-family: "Sacramento", cursive;
-    font-size: 10vh;
-    color: $background-dark;
-    padding-top: 50px;
-  }
-
-  #handletterCaption-dark {
-    font-family: "Unica One", cursive;
-    font-size: 10vh;
-    color: $megatron-gradient-secondary;
-    padding-top: 50px;
-  }
-}
-
-.nameBox {
-  position: absolute;
-  left: 8px;
-  top: 3px;
-  width: 280px;
-  height: auto;
-  z-index: 1;
-
-  &.nameStyle-light {
-    a {
-      .svg-name {
-        fill: $background-dark;
-      }
-    }
-  }
-  &.nameStyle-dark {
-    a {
-      .svg-name {
-        fill: #F205E2;
-      }
-    }
-  }
-}
-
 ul {
   list-style: none;
   padding: 0;
 }
+
+@media only screen and (min-width: 1400px) {
+  .headerbox {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+  
+    h2#aboutCaption-light {
+      font-family: 'Sacramento', cursive;
+      font-size: 10vh;
+      color: $background-dark;
+    }
+  
+    h2#aboutCaption-dark {
+      font-family: 'Abril Fatface', cursive;
+      font-size: 10vh;
+      color: $strong-turquoise;
+    }
+  
+    #designCaption-light {
+      font-family: "Sacramento", cursive;
+      font-size: 10vh;
+      color: $background-dark;
+    }
+  
+    #designCaption-dark {
+      font-family: "Fascinate", cursive;
+      font-size: 10vh;
+      color: $dark-gradient-color-secondary;
+    }
+  
+    #devCaption-light {
+      font-family: "Sacramento", cursive;
+      font-size: 10vh;
+      color: $background-dark;
+    }
+  
+    #devCaption-dark {
+      font-family: 'Audiowide', cursive;
+      font-size: 10vh;
+      color: $megatron-gradient-tertiary;
+    }
+  
+    #handletterCaption-light {
+      font-family: "Sacramento", cursive;
+      font-size: 10vh;
+      color: $background-dark;
+      padding-top: 50px;
+    }
+  
+    #handletterCaption-dark {
+      font-family: "Unica One", cursive;
+      font-size: 10vh;
+      color: $megatron-gradient-secondary;
+      padding-top: 50px;
+    }
+  }
+  
+  .nameBox {
+    position: absolute;
+    left: 8px;
+    top: 3px;
+    width: 280px;
+    height: auto;
+    z-index: 1;
+  
+    &.nameStyle-light {
+      a {
+        .svg-name {
+          fill: $background-dark;
+        }
+      }
+    }
+    &.nameStyle-dark {
+      a {
+        .svg-name {
+          fill: #F205E2;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1399px) {
+  .headerbox {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+  
+    h2#aboutCaption-light {
+      font-family: 'Sacramento', cursive;
+      font-size: 10vh;
+      color: $background-dark;
+    }
+  
+    h2#aboutCaption-dark {
+      font-family: 'Abril Fatface', cursive;
+      font-size: 10vh;
+      color: $strong-turquoise;
+    }
+  
+    #designCaption-light {
+      font-family: "Sacramento", cursive;
+      font-size: 6vw;
+      color: $background-dark;
+    }
+  
+    #designCaption-dark {
+      font-family: "Fascinate", cursive;
+      font-size: 6vw;
+      color: $dark-gradient-color-secondary;
+    }
+  
+    #devCaption-light {
+      font-family: "Sacramento", cursive;
+      font-size: 6vw;
+      color: $background-dark;
+    }
+  
+    #devCaption-dark {
+      font-family: 'Audiowide', cursive;
+      font-size: 3.8vw;
+      color: $megatron-gradient-tertiary;
+      margin-top: 60px;
+      margin-bottom: 50px;
+    }
+  
+    #handletterCaption-light {
+      font-family: "Sacramento", cursive;
+      font-size: 10vh;
+      color: $background-dark;
+      padding-top: 50px;
+    }
+  
+    #handletterCaption-dark {
+      font-family: "Unica One", cursive;
+      font-size: 10vh;
+      color: $megatron-gradient-secondary;
+      padding-top: 50px;
+    }
+  }
+
+  .nameBox {
+    position: absolute;
+    left: 8px;
+    top: 3px;
+    width: 24vw;
+    height: auto;
+    z-index: 1;
+  
+    &.nameStyle-light {
+      a {
+        .svg-name {
+          fill: $background-dark;
+        }
+      }
+    }
+    &.nameStyle-dark {
+      a {
+        .svg-name {
+          fill: #F205E2;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .headerbox {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+  
+    h2#aboutCaption-light {
+      font-family: 'Sacramento', cursive;
+      font-size: 10vh;
+      color: $background-dark;
+    }
+  
+    h2#aboutCaption-dark {
+      font-family: 'Abril Fatface', cursive;
+      font-size: 10vh;
+      color: $strong-turquoise;
+    }
+  
+    #designCaption-light {
+      font-family: "Sacramento", cursive;
+      font-size: 6vw;
+      color: $background-dark;
+    }
+  
+    #designCaption-dark {
+      font-family: "Fascinate", cursive;
+      font-size: 6vw;
+      color: $dark-gradient-color-secondary;
+      margin-top: 20px;
+      margin-bottom: 80px;
+    }
+  
+    #devCaption-light {
+      font-family: "Sacramento", cursive;
+      font-size: 13vw;
+      color: $background-dark;
+      margin-top: 210px;
+    }
+  
+    #devCaption-dark {
+      font-family: 'Audiowide', cursive;
+      font-size: 10vw;
+      color: $megatron-gradient-tertiary;
+      margin-top: 150px;
+    }
+  
+    #handletterCaption-light {
+      font-family: "Sacramento", cursive;
+      font-size: 10vh;
+      color: $background-dark;
+      padding-top: 50px;
+    }
+  
+    #handletterCaption-dark {
+      font-family: "Unica One", cursive;
+      font-size: 10vh;
+      color: $megatron-gradient-secondary;
+      padding-top: 50px;
+    }
+  }
+
+  .nameBox {
+    position: absolute;
+    left: 8px;
+    top: 3px;
+    width: 30vw;
+    height: auto;
+    z-index: 1;
+  
+    &.nameStyle-light {
+      a {
+        .svg-name {
+          fill: $background-dark;
+        }
+      }
+    }
+    &.nameStyle-dark {
+      a {
+        .svg-name {
+          fill: #F205E2;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 600px) and (max-width: 767px) {
+  .headerbox {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+  
+    h2#aboutCaption-light {
+      font-family: 'Sacramento', cursive;
+      font-size: 10vh;
+      color: $background-dark;
+    }
+  
+    h2#aboutCaption-dark {
+      font-family: 'Abril Fatface', cursive;
+      font-size: 10vh;
+      color: $strong-turquoise;
+    }
+  
+    #designCaption-light {
+      font-family: "Sacramento", cursive;
+      font-size: 6vw;
+      color: $background-dark;
+    }
+  
+    #designCaption-dark {
+      font-family: "Fascinate", cursive;
+      font-size: 6vw;
+      color: $dark-gradient-color-secondary;
+    }
+  
+    #devCaption-light {
+      font-family: "Sacramento", cursive;
+      font-size: 12vw;
+      color: $background-dark;
+      margin-top: 110px;
+    }
+  
+    #devCaption-dark {
+      font-family: 'Audiowide', cursive;
+      font-size: 10vw;
+      color: $megatron-gradient-tertiary;
+      margin-top: 65px;
+    }
+  
+    #handletterCaption-light {
+      font-family: "Sacramento", cursive;
+      font-size: 10vh;
+      color: $background-dark;
+      padding-top: 50px;
+    }
+  
+    #handletterCaption-dark {
+      font-family: "Unica One", cursive;
+      font-size: 10vh;
+      color: $megatron-gradient-secondary;
+      padding-top: 50px;
+    }
+  }
+
+  .nameBox {
+    position: absolute;
+    left: 8px;
+    top: 3px;
+    width: 24vw;
+    height: auto;
+    z-index: 1;
+  
+    &.nameStyle-light {
+      a {
+        .svg-name {
+          fill: $background-dark;
+        }
+      }
+    }
+    &.nameStyle-dark {
+      a {
+        .svg-name {
+          fill: #F205E2;
+        }
+      }
+    }
+  }
+}
+
+// @media only screen and (min-width: 330px) and (max-width: 599px)
