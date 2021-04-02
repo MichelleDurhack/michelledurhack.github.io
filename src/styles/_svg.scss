@@ -3,72 +3,300 @@
     SVGs
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 */
-.koiStyle {
-  .svg-koi {
-    height: 700px;
-    width: auto;
-    position: fixed;
-    top: 150px;
-    left: 50px;
-    z-index: 1;
-  }
-
-  &.koiStyle-light {
+@media only screen and (min-width: 1400px) {
+  .koiStyle {
     .svg-koi {
-      .svg-koi-primary {
-        fill: #F28891;
-      }
-      .svg-koi-accent {
-        fill: #262626;;
+      height: 700px;
+      width: auto;
+      position: fixed;
+      top: 10vh;
+      right: 50px;
+      z-index: 1;
+      transform: rotate(140deg);
+    }
+  
+    &.koiStyle-light {
+      .svg-koi {
+        .svg-koi-primary {
+          fill: #F28891;
+        }
+        .svg-koi-accent {
+          fill: #262626;;
+        }
       }
     }
-  }
-
-  &.koiStyle-dark {
-    .svg-koi {
-      .svg-koi-primary {
-        fill: #F18DF2;
+  
+    &.koiStyle-dark {
+      .svg-koi {
+        .svg-koi-primary {
+          fill: #F18DF2;
+        }
+        .svg-koi-accent {
+          fill: #09756E;
+        }
       }
-      .svg-koi-accent {
-        fill:  #64F4E6;
+    }
+  } 
+  
+  .monsteraStyle {
+    .svg-monstera {
+      position: fixed;
+      bottom: 40px;
+      right: -20px;
+      height: 600px;
+      width: auto;
+      z-index: 0;
+    }
+  
+    &.monsteraStyle-light {
+      .svg-monstera {
+        .svg-monstera-primary {
+          fill: #01401C;
+        }
+    
+        .svg-monstera-accent {
+          fill: #012611;
+        }
+      }
+    }
+    &.monsteraStyle-dark {
+      .svg-monstera {
+        .svg-monstera-primary {
+          stroke: $megatron-gradient-tertiary;
+          stroke-width: 5px;
+          fill: $background-dark;
+        }
+    
+        .svg-monstera-accent {
+          stroke: $megatron-gradient-secondary;
+          stroke-width: 3px;
+          fill: $background-dark;
+        }
       }
     }
   }
 }
 
-.monsteraStyle {
-  .svg-monstera {
-    position: fixed;
-    bottom: 40px;
-    right: -20px;
-    height: 600px;
-    width: auto;
-  }
-
-  &.monsteraStyle-light {
-    .svg-monstera {
-      .svg-monstera-primary {
-        fill: #01401C;
-      }
+@media only screen and (min-width: 992px) and (max-width: 1399px) {
+  .koiStyle {
+    .svg-koi {
+      height: 55vw;
+      width: auto;
+      position: fixed;
+      top: 10vh;
+      right: 50px;
+      z-index: 1;
+      transform: rotate(140deg);
+    }
   
-      .svg-monstera-accent {
-        fill: #012611;
+    &.koiStyle-light {
+      .svg-koi {
+        .svg-koi-primary {
+          fill: #F28891;
+        }
+        .svg-koi-accent {
+          fill: #262626;;
+        }
+      }
+    }
+  
+    &.koiStyle-dark {
+      .svg-koi {
+        .svg-koi-primary {
+          fill: #F18DF2;
+        }
+        .svg-koi-accent {
+          fill: #09756E;
+        }
       }
     }
   }
-  &.monsteraStyle-dark {
+  .monsteraStyle {
     .svg-monstera {
-      .svg-monstera-primary {
-        stroke: $megatron-gradient-tertiary;
-        stroke-width: 5px;
-        fill: $background-dark;
-      }
+      position: fixed;
+      bottom: 40px;
+      right: -20px;
+      height: 50vw;
+      width: auto;
+      z-index: 0;
+    }
   
-      .svg-monstera-accent {
-        stroke: $megatron-gradient-secondary;
-        stroke-width: 3px;
-        fill: $background-dark;
+    &.monsteraStyle-light {
+      .svg-monstera {
+        .svg-monstera-primary {
+          fill: #01401C;
+        }
+    
+        .svg-monstera-accent {
+          fill: #012611;
+        }
+      }
+    }
+    &.monsteraStyle-dark {
+      .svg-monstera {
+        .svg-monstera-primary {
+          stroke: $megatron-gradient-tertiary;
+          stroke-width: 5px;
+          fill: $background-dark;
+        }
+    
+        .svg-monstera-accent {
+          stroke: $megatron-gradient-secondary;
+          stroke-width: 3px;
+          fill: $background-dark;
+        }
       }
     }
   }
 }
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .koiStyle {
+    .svg-koi {
+      height: 70vw;
+      width: auto;
+      position: fixed;
+      top: 10vh;
+      right: 50px;
+      z-index: 1;
+      transform: rotate(140deg);
+    }
+  
+    &.koiStyle-light {
+      .svg-koi {
+        .svg-koi-primary {
+          fill: #F28891;
+        }
+        .svg-koi-accent {
+          fill: #262626;;
+        }
+      }
+    }
+  
+    &.koiStyle-dark {
+      .svg-koi {
+        .svg-koi-primary {
+          fill: #F18DF2;
+        }
+        .svg-koi-accent {
+          fill: #09756E;
+        }
+      }
+    }
+  }
+  .monsteraStyle {
+    .svg-monstera {
+      position: fixed;
+      bottom: 40px;
+      right: -20px;
+      height: 50vw;
+      width: auto;
+      z-index: 0;
+    }
+  
+    &.monsteraStyle-light {
+      .svg-monstera {
+        .svg-monstera-primary {
+          fill: #01401C;
+        }
+    
+        .svg-monstera-accent {
+          fill: #012611;
+        }
+      }
+    }
+    &.monsteraStyle-dark {
+      .svg-monstera {
+        .svg-monstera-primary {
+          stroke: $megatron-gradient-tertiary;
+          stroke-width: 5px;
+          fill: $background-dark;
+        }
+    
+        .svg-monstera-accent {
+          stroke: $megatron-gradient-secondary;
+          stroke-width: 3px;
+          fill: $background-dark;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 600px) and (max-width: 767px) {
+  .koiStyle {
+    .svg-koi {
+      height: 70vw;
+      width: auto;
+      position: fixed;
+      top: 10vh;
+      right: 50px;
+      z-index: 1;
+      transform: rotate(140deg);
+    }
+  
+    &.koiStyle-light {
+      .svg-koi {
+        .svg-koi-primary {
+          fill: #F28891;
+        }
+        .svg-koi-accent {
+          fill: #262626;;
+        }
+      }
+    }
+  
+    &.koiStyle-dark {
+      .svg-koi {
+        .svg-koi-primary {
+          fill: #F18DF2;
+        }
+        .svg-koi-accent {
+          fill: #09756E;
+        }
+      }
+    }
+  }
+
+  .monsteraStyle {
+    .svg-monstera {
+      position: fixed;
+      bottom: 40px;
+      right: -20px;
+      height: 50vw;
+      width: auto;
+      z-index: 0;
+    }
+  
+    &.monsteraStyle-light {
+      .svg-monstera {
+        .svg-monstera-primary {
+          fill: #01401C;
+        }
+    
+        .svg-monstera-accent {
+          fill: #012611;
+        }
+      }
+    }
+    &.monsteraStyle-dark {
+      .svg-monstera {
+        .svg-monstera-primary {
+          stroke: $megatron-gradient-tertiary;
+          stroke-width: 5px;
+          fill: $background-dark;
+        }
+    
+        .svg-monstera-accent {
+          stroke: $megatron-gradient-secondary;
+          stroke-width: 3px;
+          fill: $background-dark;
+        }
+      }
+    }
+  }
+}
+
+
+ 
+// @media only screen and (min-width: 330px) and (max-width: 599px)
