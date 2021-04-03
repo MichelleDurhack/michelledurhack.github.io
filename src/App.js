@@ -22,6 +22,22 @@ function App() {
     langStorage = "german";
   }
 
+  const [ localENG, setLocalENG] = useState(langStorage);
+
+  useEffect(
+    () => {
+      if (localENG === "english") {
+        localStorage.setItem("english", true);
+      }
+      else {
+        localStorage.setItem("english", false);
+      }
+    },
+    [localENG]
+  )
+
+  console.log("locale", localENG);
+
   const [isDesktop, setDesktop] = useState(window.innerWidth > 599);
 
   const updateMedia = () => {
@@ -33,22 +49,8 @@ function App() {
     return () => window.removeEventListener("resize", updateMedia);
   });
 
-  console.log(isDesktop);
-
   const [ theme, setTheme ] = useState(storage);
-  const [ localENG, setLocalENG] = useState(langStorage);
-
-  useEffect(
-    () => {
-      if (localENG === "english") {
-        localStorage.setItem("english", true);
-      }
-      else {
-        localStorage.setItem("english", false);
-      }
-    }
-  )
-
+  
   useEffect(
     () => {
       if (theme === "light") {

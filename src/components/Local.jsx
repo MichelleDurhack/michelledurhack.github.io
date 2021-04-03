@@ -5,7 +5,8 @@ import { ThemeContext } from './../ThemeContext';
 const Local = () => {
   const { localENG, setLocalENG } = useContext(LocalContext);
   const { theme } = useContext(ThemeContext);
-  const flagClass = localENG === "false" ? "media/germany.png" : "media/united-kingdom.png";
+  console.log("local Component", localENG);
+  const flagClass = localENG === "true" ? "media/united-kingdom.png" : "media/germany.png";
   return (
     <div className="main">
       <button className={`localBtn localBtn-${theme}`} onClick={() => localENG === "false" ? setLocalENG("true") : setLocalENG("false")}><img src={flagClass} alt="german flag icon"/></button>

@@ -1,13 +1,22 @@
 import { Fragment, useContext } from "react";
 import { ThemeContext } from "./../ThemeContext";
+import { LocalContext } from './../LocalContext';
 
 const Handletterer = () => {
   const { theme } = useContext(ThemeContext);
+  const { localENG } = useContext(LocalContext);
+
+  const header = localENG === "true" ? "My handlettering works" : "Meine Handlettering Arbeiten";
+  const freeWork = localENG === "true" ? "Free Work" : "Freie Arbeit";
+  const bujo1 = localENG === "true" ? "When starting my bulletjournal I experimented with a lot of different header styles." : "Zu beginn meines Bullet Journal habe ich mit verschiedenen Titel Stilen experimentiert";
+  const bujo2 = localENG === "true" ? "Another one of my header experimentations." : "Hier ist ein weiteres Experiment.";
+  const bujo3 = localENG === "true" ? "One of the pages in my calendar setup. By far my favourite typeface creation." : "Eine Seite meines Kalender Setups. Bis jetzt meine absolut liebste Typeface.";
+  const bujo4 = localENG === "true" ? "Creating a jam etiquette for a fake, all natural farming company. The design was inspired by mordern start up companies that have a strong handmade feel." : "Ein Etiketten Design für eine Fake Bio-Farmer Firma. Das Design ist inspiriert von modernen Startup Firmen, mit einem starken Handmade Eindruck";
 
   return (
     <Fragment>
       <div className="headerbox">
-        <h2 id={`handletterCaption-${theme}`}>My handlettering works</h2>
+        <h2 id={`handletterCaption-${theme}`}>{header}</h2>
       </div>
 
       <div className="main">
@@ -19,9 +28,9 @@ const Handletterer = () => {
           </div>
           <div id="letteringText1" className="letteringText">
             <div className={`letteringBox journalText-${theme}`}>
-              <span className={`letHeader journalHeader-${theme}`}>Free Work</span>
+              <span className={`letHeader journalHeader-${theme}`}>{freeWork}</span>
               <span className="letSubheader">bulletjournal</span>
-              <p className="letText">When starting my bulletjournal I experimented with a lot of different header styles.</p>
+              <p className="letText">{bujo1}</p>
             </div>
           </div>
 
@@ -31,9 +40,9 @@ const Handletterer = () => {
           </div>
           <div id="letteringText2" className="letteringText">
             <div className={`letteringBox journalText-${theme}`}>
-              <span className={`letHeader journalHeader-${theme}`}>Free Work</span>
+              <span className={`letHeader journalHeader-${theme}`}>{freeWork}</span>
               <span className="letSubheader">bulletjournal</span>
-              <p className="letText">Another one of my header experimentations.</p>
+              <p className="letText">{bujo2}</p>
             </div>
           </div>
 
@@ -43,9 +52,9 @@ const Handletterer = () => {
           </div>
           <div id="letteringText3" className="letteringText">
             <div className={`letteringBox journalText-${theme}`}>
-              <span className={`letHeader journalHeader-${theme}`}>Free Work</span>
+              <span className={`letHeader journalHeader-${theme}`}>{freeWork}</span>
               <span className="letSubheader">bulletjournal</span>
-              <p className="letText">One of the pages in my calendar setup. By far my favourite typeface creation.</p>
+              <p className="letText">{bujo3}</p>
             </div>
           </div>
 
@@ -59,9 +68,9 @@ const Handletterer = () => {
           </div>
           <div id="letteringText4" className="letteringText">
             <div className={`letteringBox etiketteText-${theme}`}>
-              <span className={`letHeader etiketteHeader-${theme}`}>Free Work</span>
+              <span className={`letHeader etiketteHeader-${theme}`}>{freeWork}</span>
               <span className="letSubheader">etiquette design</span>
-              <p className="letText">Creating a jam etiquette for a fake, all natural farming company. The design was inspired by mordern start up companies that have a strong handmade feel.</p>
+              <p className="letText">{bujo4}</p>
             </div>
           </div>
 

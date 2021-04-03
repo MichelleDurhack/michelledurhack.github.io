@@ -1,12 +1,17 @@
 import { Fragment, useContext } from 'react';
 import { ThemeContext } from './../ThemeContext';
+import { LocalContext } from './../LocalContext';
 
 const AboutMe = () => {
   const { theme } = useContext(ThemeContext);
+  const { localENG } = useContext(LocalContext);
+
+  const header = localENG === "true" ? "My skills" : "Meine Kenntnisse";
+  const devskills = localENG === "true" ? "Development Skills" : "Entwicklungs Fähigkeiten";
   return (
     <Fragment>
       <div className="headerbox">
-        <h2 id={`aboutCaption-${theme}`}>My skills</h2>
+        <h2 id={`aboutCaption-${theme}`}>{header}</h2>
       </div>
 
       <div className="main">
@@ -54,7 +59,7 @@ const AboutMe = () => {
         <div className="card card3">
           <div className="face face1">
             <div className="cardcontent">
-              <h2 className={`devskills-${theme}`}>Development Skills</h2>
+              <h2 className={`devskills-${theme}`}>{devskills}</h2>
               <ul className={`devskills-${theme}`}>
                 <li>NPM</li>
                 <li>RestAPI</li>

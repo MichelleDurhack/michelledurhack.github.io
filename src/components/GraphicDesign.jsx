@@ -1,12 +1,29 @@
 import { Fragment, useContext } from "react";
 import { ThemeContext } from './../ThemeContext';
+import { LocalContext } from './../LocalContext';
 
 const GraphicDesign = () => {
   const { theme } = useContext(ThemeContext);
+  const { localENG } = useContext(LocalContext);
+
+  const header = localENG === "true" ? "My print works" : "Meine Print Arbeiten";
+  const freeWork = localENG === "true" ? "Free Work" : "Freie Arbeit";
+  const newspaper = localENG === "true" ? "Student Newspaper" : "Schülerzeitung";
+  const worksample = localENG === "true" ? "Work Sample" : "Arbeitsproben";
+  const work1 = localENG === "true" ? "First attempt at creating a vaporwave collage." : "Mein erster Versuch eine Vaporwave Collage zu kreieren.";
+  const work2 = localENG === "true" ? "Continuing to explore the vaporwave genre." : "Weiter Erkundung des Genres.";
+  const work3 = localENG === "true" ? "Creating an editorial collage." : "Kreation einer Editorial Collage.";
+  const work4 = localENG === "true" ? "The first 2 pages of my 4 page article about the philosophy of Virtual Reality." : "Die ersten beiden Seiten eines 4-seitigen Artikels über die Philosophie von Virtual Reality";
+  const work5 = localENG === "true" ? "The final 2 pages of my 4 page article about the philosophy of Virtual Reality." : "Die letzten beiden Seiten eines 4-seitigen Artikels über die Philosophie von Virtual Reality";
+  const work6 = localENG === "true" ? "An article about the genre vaporwave and explaining my fascination for it." : "Ein Artikel über das Genre Vaporwave und eine Erklärung meiner Faszination für das Genre.";
+  const work7 = localENG === "true" ? "A photo I took in the `Landschaftspark Duisburg` as part of a series." : "Ein Bild aus einer Serie, aufgenommen im Landschaftspark Duisburg.";
+  const work8 = localENG === "true" ? "A work sample, created for an apprenticeship position." : "Eine Arbeitsprobe für eine Ausbildungsstelle."; 
+  const work9 = localENG === "true" ? "A collage inspired by Graphic Designer Magdiel Lopez." : "Eine Collage inspiriert durch den Graphic Designer Magdiel Lopez."; 
+
   return (
     <Fragment>
       <div className="headerbox">
-        <h2 id={`designCaption-${theme}`}>My Print Works</h2>
+        <h2 id={`designCaption-${theme}`}>{header}</h2>
       </div>
 
       <div className="main">
@@ -18,9 +35,9 @@ const GraphicDesign = () => {
           </div>
           <div className="imageText image1">
             <div className="textBox">
-              <span className={`headerText text1-${theme}`}>Free Work</span>
+              <span className={`headerText text1-${theme}`}>{freeWork}</span>
               <span className={`subheaderText mainText1-${theme}`}>Vaporwave</span>
-              <p className={`mainText1-${theme}`}>First attempt at creating a vaporwave collage.</p>
+              <p className={`mainText1-${theme}`}>{work1}</p>
             </div>
           </div>
 
@@ -30,9 +47,9 @@ const GraphicDesign = () => {
           </div>
           <div className="imageText image2">
             <div className="textBox">
-              <span className={`headerText text2-${theme}`}>Free Work</span>
+              <span className={`headerText text2-${theme}`}>{freeWork}</span>
               <span className={`subheaderText mainText2-${theme}`}>Vaporwave</span>
-              <p className={`mainText2-${theme}`}>Continuing to explore the vaporwave genre.</p>
+              <p className={`mainText2-${theme}`}>{work2}</p>
             </div>
           </div>
 
@@ -42,9 +59,9 @@ const GraphicDesign = () => {
           </div>
           <div className="imageText image3">
             <div className="textBox">
-              <span className={`headerText text3-${theme}`}>Free Work</span>
+              <span className={`headerText text3-${theme}`}>{freeWork}</span>
               <span className={`subheaderText mainText3-${theme}`}>Vaporwave</span>
-              <p className={`mainText3-${theme}`}>Creating an editorial collage.</p>
+              <p className={`mainText3-${theme}`}>{work3}</p>
             </div>
           </div>
 
@@ -55,9 +72,9 @@ const GraphicDesign = () => {
           </div>
           <div className="imageText image4">
             <div className="textBox">
-              <span className={`headerText text4-${theme}`}>Student Newspaper</span>
+              <span className={`headerText text4-${theme}`}>{newspaper}</span>
               <span className={`subheaderText mainText4-${theme}`}>Article</span>
-              <p className={`mainText4-${theme}`}>The first 2 pages of my 4 page article about the philosophy of Virtual Reality.</p>
+              <p className={`mainText4-${theme}`}>{work4}</p>
             </div>
           </div>
 
@@ -68,9 +85,9 @@ const GraphicDesign = () => {
           </div>
           <div className="imageText image5">
             <div className="textBox">
-              <span className={`headerText text4-${theme}`}>Student Newspaper</span>
+              <span className={`headerText text4-${theme}`}>{newspaper}</span>
               <span className={`subheaderText mainText4-${theme}`}>Article</span>
-              <p className={`mainText4-${theme}`}>The final 2 pages of my 4 page article about the philosophy of Virtual Reality.</p>
+              <p className={`mainText4-${theme}`}>{work5}</p>
             </div>
           </div>
 
@@ -80,9 +97,9 @@ const GraphicDesign = () => {
           </div>
           <div className="imageText image6">
             <div className="textBox">
-              <span className={`headerText text5-${theme}`}>Student Newspaper</span>
+              <span className={`headerText text5-${theme}`}>{newspaper}</span>
               <span className={`subheaderText mainText5-${theme}`}>Article</span>
-              <p className={`mainText5-${theme}`}>An article about the genre vaporwave and explaining my fascination for it.</p>
+              <p className={`mainText5-${theme}`}>{work6}</p>
             </div>
           </div>
 
@@ -92,9 +109,9 @@ const GraphicDesign = () => {
           </div>
           <div className="imageText image7">
             <div className="textBox">
-              <span className={`headerText text6-${theme}`}>Free Work</span>
+              <span className={`headerText text6-${theme}`}>{freeWork}</span>
               <span className={`subheaderText mainText6-${theme}`}>Photography</span>
-              <p className={`mainText6-${theme}`}>A photo I took in the "Landschaftspark Duisburg" as part of a series.</p>
+              <p className={`mainText6-${theme}`}>{work7}</p>
             </div>
           </div>
 
@@ -112,9 +129,9 @@ const GraphicDesign = () => {
           </div>
           <div className="imageText image8">
             <div className="textBox">
-              <span className={`headerText text7-${theme}`}>Work Sample</span>
+              <span className={`headerText text7-${theme}`}>{worksample}</span>
               <span className={`subheaderText mainText7-${theme}`}>Graphic Design</span>
-              <p className={`mainText7-${theme}`}>A work sample, created for an apprenticeship position.</p>
+              <p className={`mainText7-${theme}`}>{work8}</p>
             </div>
           </div>
 
@@ -124,9 +141,9 @@ const GraphicDesign = () => {
           </div>
           <div className="imageText image9">
             <div className="textBox">
-              <span className={`headerText text8-${theme}`}>Free Work</span>
+              <span className={`headerText text8-${theme}`}>{freeWork}</span>
               <span className={`subheaderText mainText8-${theme}`}>Vaporwave</span>
-              <p className={`mainText8-${theme}`}>A collage inspired by Graphic Designer Magdiel Lopez.</p>
+              <p className={`mainText8-${theme}`}>{work9}</p>
             </div>
           </div>
 

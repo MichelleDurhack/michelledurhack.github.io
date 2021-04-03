@@ -1,12 +1,17 @@
-import React, { useContext } from 'react';
+import React, { useContext, Fragment } from 'react';
 import { ThemeContext } from "../ThemeContext";
+import { LocalContext } from './../LocalContext';
+import Local from "./Local";
 
 
 const Footer = () => {
   const { theme, setTheme } = useContext(ThemeContext);
+  const { localENG } = useContext(LocalContext);
   const moonClassName = theme === "light" ? "far fa-moon" : "fas fa-cloud-moon";
+  const textClass = localENG === "true" ? "Change up the mood" : "Verändere die Stimmung";
 
   return (
+    <Fragment>
     <div className="main">
       <div className={"footer ftmain-" + theme}>
         <div className={"ftItem ftIcons fticons-" + theme}>
@@ -18,12 +23,14 @@ const Footer = () => {
         <div className={"ftItem"}>
           <button name="Dark mode" className="buttonBox" onClick={() => theme === "light" ? setTheme("dark") : setTheme("light")}>
             <span id={"mn mnicon-" + theme} className={moonClassName}></span>
-            <p>Change up the mood</p>
+            <p>{textClass}</p>
           </button>
         </div>
       </div>
+      <Local />
     </div>
-
+    
+    </Fragment>
   );
 }
  
