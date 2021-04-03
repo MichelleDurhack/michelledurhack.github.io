@@ -16,10 +16,10 @@ function App() {
 
   let langStorage ="";
   if (localStorage.getItem("english") === "true") {
-    langStorage = "english";
+    langStorage = "true";
   }
   else {
-    langStorage = "german";
+    langStorage = "false";
   }
 
   const [ localENG, setLocalENG] = useState(langStorage);
