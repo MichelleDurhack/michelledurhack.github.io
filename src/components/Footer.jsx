@@ -27,6 +27,9 @@ const Footer = () => {
           </button>
         </div>
       </div>
+      <div className="licenses">
+        <a className={`anchorText anchor-${theme}`} href="https://www.flaticon.com/authors/freepik">Flag Credits</a>
+      </div>
       <Local />
     </div>
     
