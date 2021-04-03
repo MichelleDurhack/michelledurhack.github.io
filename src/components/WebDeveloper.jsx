@@ -7,7 +7,7 @@ const WebDeveloper = () => {
   const { theme } = useContext(ThemeContext);
   const { localENG } = useContext(LocalContext);
 
-  const text = localENG === "true" ? "There isn't a lot to show yet. Have you seen my website tho? Pretty cool huh? Made with React, SASS and cool gradients. Check back here later, more projects to come. Make sure to check out my skills page, where you can see what my other skills are! To check out this websites GitHub repository click" : "Es gibt noch nicht viel zu zeigen, aber hast du meine Website schon gesehen? Gemacht mit React, Sass und coolen Verläufen. Schau doch später nochmal vorbei, hier werden bald mehr Projekte zu finden sein. Auf meiner Kenntnisse Seite findest du die ganzen Fähigkeiten die ich habe. Den Link zu dem GitHub Repository gibt es ";
+  const text = localENG === "true" ? "There isn't a lot to show yet. Have you seen my website tho? Pretty cool huh? Made with React, SASS and cool gradients. Check back here later, more projects to come. Make sure to check out my skills page, where you can see what my other skills are! To check out this websites GitHub repository click " : "Es gibt noch nicht viel zu zeigen, aber hast du meine Website schon gesehen? Gemacht mit React, Sass und coolen Verläufen. Schau doch später nochmal vorbei, hier werden bald mehr Projekte zu finden sein. Auf meiner Kenntnisse Seite findest du die ganzen Fähigkeiten die ich habe. Den Link zu dem GitHub Repository gibt es ";
   const anchor = localENG === "true" ? "here.": "hier.";
   return (
     <Fragment>

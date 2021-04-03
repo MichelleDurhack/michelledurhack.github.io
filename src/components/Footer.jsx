@@ -20,7 +20,7 @@ const Footer = () => {
           <a href="https://www.instagram.com/thedeadellie/"><span id="icon-bottom1" className="fab fa-instagram icon"></span></a>
           <a href="https://github.com/MichelleDurhack"><span id="icon-bottom2" className="fab fa-github icon-bottom"></span></a>
         </div>
-        <div className={"ftItem"}>
+        <div className={"ftItem ftMoon"}>
           <button name="Dark mode" className="buttonBox" onClick={() => theme === "light" ? setTheme("dark") : setTheme("light")}>
             <span id={"mn mnicon-" + theme} className={moonClassName}></span>
             <p>{textClass}</p>
