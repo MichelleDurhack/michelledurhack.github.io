@@ -348,4 +348,87 @@ ul {
   }
 }
 
-// @media only screen and (min-width: 330px) and (max-width: 599px)
+@media only screen and (min-width: 330px) and (max-width: 599px) {
+  .headerbox {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+  
+    h2#aboutCaption-light {
+      font-family: 'Sacramento', cursive;
+      font-size: 10vh;
+      color: $background-dark;
+    }
+  
+    h2#aboutCaption-dark {
+      font-family: 'Abril Fatface', cursive;
+      font-size: 10vh;
+      color: $strong-turquoise;
+    }
+
+    #handletterCaption-light {
+      font-family: "Sacramento", cursive;
+      font-size: 9vw;
+      color: $background-dark;
+      padding-top: 50px;
+    }
+  
+    #handletterCaption-dark {
+      font-family: "Unica One", cursive;
+      font-size: 9vw;
+      color: $megatron-gradient-secondary;
+      padding-top: 50px;
+    }
+
+    #designCaption-light {
+      font-family: "Sacramento", cursive;
+      font-size: 9vw;
+      color: $background-dark;
+    }
+  
+    #designCaption-dark {
+      font-family: "Fascinate", cursive;
+      font-size: 9vw;
+      color: $dark-gradient-color-secondary;
+    }
+
+    #devCaption-light {
+      font-family: "Sacramento", cursive;
+      font-size: 8vw;
+      color: $background-dark;
+      margin-top: 110px;
+    }
+  
+    #devCaption-dark {
+      font-family: 'Audiowide', cursive;
+      font-size: 6.5vw;
+      color: $megatron-gradient-tertiary;
+      margin-top: 65px;
+    }
+  }
+
+  .nameBox {
+    position: absolute;
+    left: 4vw;
+    top: 3px;
+    width: 90vw;
+    height: auto;
+    z-index: 1;
+  
+    &.nameStyle-light {
+      a {
+        .svg-name {
+          fill: $background-dark;
+        }
+      }
+    }
+    &.nameStyle-dark {
+      a {
+        .svg-name {
+          fill: #F205E2;
+        }
+      }
+    }
+  }
+}

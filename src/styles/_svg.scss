@@ -297,6 +297,78 @@
   }
 }
 
+@media only screen and (min-width: 330px) and (max-width: 599px) {
+  .koiStyle {
+    .svg-koi {
+      height: 45vh;
+      width: auto;
+      position: absolute;
+      top: 45vh;
+      left: 20vw;
+      z-index: 1;
+      transform: rotate(-20deg);
+    }
+  
+    &.koiStyle-light {
+      .svg-koi {
+        .svg-koi-primary {
+          fill: #F28891;
+        }
+        .svg-koi-accent {
+          fill: #262626;;
+        }
+      }
+    }
+  
+    &.koiStyle-dark {
+      .svg-koi {
+        .svg-koi-primary {
+          fill: #F18DF2;
+        }
+        .svg-koi-accent {
+          fill: #1BF2DD;
+        }
+      }
+    }
+  }
 
- 
-// @media only screen and (min-width: 330px) and (max-width: 599px)
+  .monsteraStyle {
+    .svg-monstera {
+      position: absolute;
+      top: -10vw;
+      right: -10vw;
+      height: 50vw;
+      width: auto;
+      z-index: -1;
+      opacity: 80%;
+      transform: rotate(270deg);
+    }
+  
+    &.monsteraStyle-light {
+      .svg-monstera {
+        .svg-monstera-primary {
+          fill: #01401C;
+        }
+    
+        .svg-monstera-accent {
+          fill: #012611;
+        }
+      }
+    }
+    &.monsteraStyle-dark {
+      .svg-monstera {
+        .svg-monstera-primary {
+          stroke: $megatron-gradient-tertiary;
+          stroke-width: 5px;
+          fill: $background-dark;
+        }
+    
+        .svg-monstera-accent {
+          stroke: $megatron-gradient-secondary;
+          stroke-width: 3px;
+          fill: $background-dark;
+        }
+      }
+    }
+  }
+}

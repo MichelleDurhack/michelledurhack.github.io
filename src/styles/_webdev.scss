@@ -99,4 +99,43 @@
   }
 }
 
-// @media only screen and (min-width: 330px) and (max-width: 599px)
+@media only screen and (min-width: 330px) and (max-width: 599px) {
+  .textBlock {
+    width: 80vw;
+    z-index: 1;
+    margin-bottom: 30vw;
+  
+    p {
+      margin-right: 15px;
+      font-family: "Montserrat", sans-serif;
+  
+      &.textarea-light {
+        color: $background-dark;
+      }
+  
+      &.textarea-dark {
+        color: $megatron-gradient-secondary;
+      }
+
+      a {
+        text-decoration: none;
+
+        &.repoLink-light {
+          background-image: linear-gradient(40deg, #de6161 30%, #2657eb);
+          background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
+
+        &.repoLink-dark {
+          background-image: linear-gradient(40deg, #fc00ff, #00dbde);
+          background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
+      }
+    }
+
+    .webdevGif {
+      margin-left: auto;
+    }
+  }
+}

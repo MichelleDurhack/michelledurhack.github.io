@@ -268,7 +268,7 @@
 
 @media only screen and (min-width: 320px) and (max-width: 479px) {
   .icon {
-    font-size: 30px;
+    font-size: 5vw;
     margin-right: 0.8vw;
   }
   
@@ -299,7 +299,7 @@
   
     .ftItem {
       justify-content: center;
-      font-size: 30px;
+      font-size: 5vw;
       font-family: "Montserrat", sans-serif;
       margin-top: auto;
       margin-bottom: auto;
@@ -318,6 +318,7 @@
   
       &.ftIcons {
         margin-left: 8px;
+        margin-right: 10px;
         position: fixed;
         display: grid;
         gap: 4px;

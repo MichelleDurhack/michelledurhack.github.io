@@ -699,4 +699,149 @@
   }
 }
 
-// @media only screen and (min-width: 330px) and (max-width: 599px)
+@media only screen and (min-width: 330px) and (max-width: 599px) {
+  .letteringGrid {
+    min-width: 100vw;
+    min-height: 100vh;
+    margin-bottom: 18vw;
+  
+    .letteringCard {
+      position: relative;
+      margin-left: 10vw;
+  
+      .lettering {
+        width: 80vw;
+        position: absolute;
+  
+        &.etikette {
+          width: 80vw;
+          border-radius: 20px !important;
+        }
+  
+        &.frontwards {
+          border-radius: 3vw;
+          height: auto;
+          z-index: 2;
+        }
+  
+        &.backwards {
+          border-radius: 3vw;
+          top: 3vh;
+          left: 3vw;
+          z-index: 1;
+  
+          &.journal-light {
+            background-image: linear-gradient(40deg, #a6a1d3, #fab4cf);
+          }
+  
+          &.journal-dark {
+            background-image: linear-gradient(40deg, #aaffa9, #11ffbd);
+          }
+  
+          &.etikette-light {
+            background-image: linear-gradient(40deg, #df7255 60%, #d0cdbd);
+          }
+  
+          &.etikette-dark {
+            background-image: linear-gradient(40deg, #dd3e54 60%, #6be585);
+          }
+          
+          &#backwards1 {
+            height: 12vw;
+          }
+  
+          &#backwards2 {
+            height: 23vw;
+          }
+  
+          &#backwards3 {
+            height: 60vw;
+          }
+  
+          &.etiketteback {
+            border-radius: 3vw;
+            width: 80vw;
+            height: 100vw;
+          }
+        }
+      }
+  
+      &#moodtracker2 {
+        margin-top: 18vw;
+      }
+  
+      &#worksample1 {
+        margin-top: 18vw;
+      }
+  
+      &#worksample2 {
+        margin-top: 130vw;
+      }
+    }
+  
+    .letteringText {
+      display: flex;
+      align-items: center;
+      margin-left: 10vw;
+  
+      &#letteringText1 {
+        margin-top: 18vw;   
+      }
+      
+      &#letteringText2 {
+        margin-top: 47vw;
+        margin-bottom: 18vw;
+      }
+  
+      &#letteringText3 {
+        margin-top: 84vw;
+      }
+  
+      &#letteringText4 {
+        margin-top: 235vw;
+      }
+  
+      .letteringBox {
+  
+        &.journalText-light {
+          color: $background-dark;
+        }
+  
+        &.journalText-dark {
+          color: #11ffbd;
+        }
+  
+        &.etiketteText-dark {
+          color: #11ffbd;
+        }
+  
+        .letHeader {
+          font-family: 'Limelight', cursive;
+          font-size: 4vw;
+  
+          &.journalHeader-dark {
+            background-image: linear-gradient(40deg, #aaffa9, #11ffbd);
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+          }
+  
+          &.etiketteHeader-dark {
+            background-image: linear-gradient(40deg, #dd3e54 20%, #6be585);
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+          }
+        }
+  
+        .letSubheader {
+          font-family: "Montserrat", sans-serif;
+          font-size: 2vw;
+        }
+  
+        .letText {
+          font-family: "Montserrat", sans-serif;
+          font-size: 2vw;
+        }
+      }
+    }
+  }
+}

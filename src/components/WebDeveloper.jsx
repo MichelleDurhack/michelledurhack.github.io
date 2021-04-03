@@ -16,8 +16,8 @@ const WebDeveloper = () => {
             tho? Pretty cool huh? Made with React, SASS and cool 
             gradients. Check back here later, more projects to come.
             Make sure to check out my skills page, where you can see what my 
-            other skills are!</p>
-          <img src="https://media.giphy.com/media/111ebonMs90YLu/giphy.gif" alt="Thumbs up gif"/>
+            other skills are! To check out this websites GitHub repository click <a className={`repoLink-${theme}`} href="https://github.com/MichelleDurhack/michelledurhack.github.io">here.</a></p>
+          <img src="https://media.giphy.com/media/111ebonMs90YLu/giphy.gif" className="webdevGif" alt="Thumbs up gif"/>
         </div>
       </div> 
       <div className={`monsteraStyle monsteraStyle-${theme}`}>
