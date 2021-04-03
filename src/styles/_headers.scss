@@ -89,6 +89,25 @@ ul {
       }
     }
   }
+
+  .localBtn {
+    position: fixed;
+    right: 2vw;
+    top: 5vh;
+    border: none;
+    outline: none;
+
+    &.localBtn-dark {
+      background-color: $background-dark;
+    }
+    &.localBtn-light {
+      background-color: white;
+    }
+
+    img {
+      width: 2vw;
+    }
+  }
 }
 
 @media only screen and (min-width: 992px) and (max-width: 1399px) {

@@ -8,6 +8,7 @@ import Handletterer from './Handletterer';
 import AboutMe from './AboutMe';
 import LinkBox from './LinkBox';
 import Footer from './Footer';
+import Local from "./Local";
 
 
 const BigScreens = () => {
@@ -16,6 +17,7 @@ const BigScreens = () => {
   return (
     <Fragment>
         <div className="content">
+          <Local />
           <div className={`nameBox nameStyle-${theme}`}>
             <Link to="/" className="homeLink"><NameIcon/></Link>
           </div>

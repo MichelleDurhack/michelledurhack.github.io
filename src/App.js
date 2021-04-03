@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { ThemeContext } from "./ThemeContext";
+import { LocalContext } from './LocalContext';
 import BigScreens from "./components/BigScreens";
 import SmallScreens from "./components/SmallScreens";
 
@@ -11,6 +12,14 @@ function App() {
   }
   else {
     storage = "light"
+  }
+
+  let langStorage ="";
+  if (localStorage.getItem("english") === "true") {
+    langStorage = "english";
+  }
+  else {
+    langStorage = "german";
   }
 
   const [isDesktop, setDesktop] = useState(window.innerWidth > 599);
@@ -27,6 +36,18 @@ function App() {
   console.log(isDesktop);
 
   const [ theme, setTheme ] = useState(storage);
+  const [ localENG, setLocalENG] = useState(langStorage);
+
+  useEffect(
+    () => {
+      if (localENG === "english") {
+        localStorage.setItem("english", true);
+      }
+      else {
+        localStorage.setItem("english", false);
+      }
+    }
+  )
 
   useEffect(
     () => {
@@ -41,9 +62,11 @@ function App() {
   )
 
   return (
-    <ThemeContext.Provider value={{ theme, setTheme }}>
-      {isDesktop ? <BigScreens/> : <SmallScreens />}
-    </ThemeContext.Provider>
+    <LocalContext.Provider value={{ localENG, setLocalENG }}>
+      <ThemeContext.Provider value={{ theme, setTheme }}>
+        {isDesktop ? <BigScreens/> : <SmallScreens />}
+      </ThemeContext.Provider>
+    </LocalContext.Provider>
   );
 }
 
