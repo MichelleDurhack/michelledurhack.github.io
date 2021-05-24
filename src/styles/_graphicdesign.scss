@@ -3,6 +3,25 @@
     Graphic Design
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 */
+#bookletLink-dark {
+  color: #fdeff9;
+  text-decoration: underline;
+
+  &:visited {
+    color: #fdeff9;
+    text-decoration: underline;
+  }
+}
+#bookletLink-light {
+  color: black;
+  text-decoration: underline;
+
+  &:visited {
+    color: black;
+    text-decoration: underline;
+  }
+}
+
 @media only screen and (min-width: 1700px) {
   .imageGrid {
     min-width: 100%;
@@ -12,275 +31,293 @@
     grid-template-columns: repeat(4, 1fr);
     gap: 20px;
     grid-auto-rows: minmax(600px, 1fr);
-  
+
     .imageCard {
       position: relative;
       margin-top: 50px;
-  
+
       &.imageCardDouble {
         margin-left: 20px;
       }
-  
+
       .imageDouble {
         height: 500px;
         position: absolute;
-  
+
         &.ffacingDouble1 {
           border-radius: 20px 0 0 20px;
           width: auto;
           z-index: 2;
         }
-  
+
         &.ffacingDouble2 {
           margin-left: 353px;
           border-radius: 0 20px 20px 0;
           width: auto;
           z-index: 2;
         }
-  
+
         &.bfacingDouble {
           width: 720px;
           border-radius: 20px;
           top: 25px;
           left: 20px;
           z-index: 1;
-  
+
           &.double-light {
-            background-image: linear-gradient(30deg,#a8caba, #5d4157 40%);
+            background-image: linear-gradient(30deg, #a8caba, #5d4157 40%);
           }
-  
+
           &.double-dark {
             background-image: linear-gradient(#f12711, #f5af19);
           }
         }
       }
-    
+
       .image {
         height: 500px;
         position: absolute;
-  
+
         &.seriesImage {
           height: 450px;
         }
-      
+
         &.frontfacing {
           border-radius: 20px;
           width: auto;
           z-index: 2;
         }
-      
+
         &.backfacing {
           width: 375px;
           border-radius: 20px;
           top: 25px;
           left: 20px;
           z-index: 1;
-  
+
           &.no1-light {
-            background-image: linear-gradient(30deg, #B4CBD9, #7794A6, #2C3840);
+            background-image: linear-gradient(30deg, #b4cbd9, #7794a6, #2c3840);
           }
-  
+
           &.no1-dark {
-            background-image: linear-gradient(30deg,  #00c3ff, #ffff1c);
+            background-image: linear-gradient(30deg, #00c3ff, #ffff1c);
           }
-  
+
           &.no2-light {
             background-image: linear-gradient(20deg, #355c7d, #6c5b7b, #c06c84);
           }
-  
+
           &.no2-dark {
             background-image: linear-gradient(20deg, #fc00ff, #00dbde);
           }
-  
+
           &.no3-light {
-            background-image: linear-gradient(40deg, #dae2f8, #d6a4a4); 
+            background-image: linear-gradient(40deg, #dae2f8, #d6a4a4);
           }
-  
+
           &.no3-dark {
-            background-image: linear-gradient(40deg, #f7ff00 30%, #db36a4); 
+            background-image: linear-gradient(40deg, #f7ff00 30%, #db36a4);
           }
-  
+
           &.no4-light {
             background-image: linear-gradient(40deg, #ffedbc, #ed4264);
           }
-  
+
           &.no4-dark {
             background-image: linear-gradient(40deg, #00c9ff, #92fe9d);
           }
-  
+
           &.no5-light {
             background-image: linear-gradient(10deg, #eecda3, #ef629f);
           }
-  
+
           &.no5-dark {
             background-image: linear-gradient(10deg, #8a2387, #e94057, #f27121);
           }
-  
+
           &.no6-light {
             background-image: linear-gradient(10deg, #7f7fd5, #86a8e7, #91eae4);
             width: 380px;
             height: 450px;
           }
-  
+
           &.no6-dark {
             background-image: linear-gradient(10deg, #ff00cc, #333399);
             width: 380px;
             height: 450px;
           }
-  
+
           &.no7-light {
             background-image: linear-gradient(10deg, #a1ffce, #faffd1);
             width: 370px;
             height: 450px;
           }
-  
+
           &.no7-dark {
             background-image: linear-gradient(10deg, #f79d00, #64f38c);
             width: 370px;
             height: 450px;
           }
-  
+
           &.no8-light {
             background-image: linear-gradient(10deg, #be93c5, #7bc6cc);
             width: 370px;
             height: 450px;
           }
-  
+
           &.no8-dark {
             background-image: linear-gradient(10deg, #00c6ff, #0072ff);
             width: 370px;
             height: 450px;
           }
-  
+
           &.no9-light {
             background-image: linear-gradient(10deg, #e52691, #c8e2fa);
             width: 335px;
           }
-  
+
           &.no9-dark {
             background-image: linear-gradient(10deg, #feb2be 60%, #cafcbf);
             width: 335px;
           }
+
+          &.no10-light {
+            background-image: linear-gradient(10deg, #ee9ca7, #ffdde1);
+            width: 380px;
+          }
+
+          &.no10-dark {
+            background-image: linear-gradient(10deg, #7303c0, #ec38bc, #fdeff9);
+            width: 380px;
+          }
         }
       }
-  
-      &#vapor1 {
+
+      &#booklet1 {
         grid-column: 2;
       }
-  
-      &#vapor2{
+
+      &#vapor1 {
+        grid-column: 2;
+        grid-row: 2;
+      }
+
+      &#vapor2 {
         margin-left: 20px;
         grid-column: 1;
-        grid-row: 2;
-      }
-  
-      &#vapor3 {
-        grid-column: 3;
-        grid-row: 2;
-      }
-  
-      &#article1 {
-        grid-column: 1/2;
         grid-row: 3;
       }
-  
-      &#article2 {
+
+      &#vapor3 {
+        grid-column: 3;
+        grid-row: 3;
+      }
+
+      &#article1 {
         grid-column: 1/2;
         grid-row: 4;
       }
-  
+
+      &#article2 {
+        grid-column: 1/2;
+        grid-row: 5;
+      }
+
       &#article3 {
         margin-left: 20px;
         grid-column: 1;
-        grid-row: 5;
+        grid-row: 6;
       }
-  
+
       &#photo1 {
         grid-column: 3;
-        grid-row: 5;
+        grid-row: 6;
       }
-  
+
       &#exercise1 {
         margin-left: 20px;
         grid-column: 1;
-        grid-row: 6;
+        grid-row: 7;
       }
-  
+
       &#exercise2 {
-        grid-column: 2;
-        grid-row: 6;
-      }
-  
-      &#exercise3 {
-        grid-column: 3;
-        grid-row: 6;
-      }
-  
-      &#graphic1 {
         grid-column: 2;
         grid-row: 7;
       }
+
+      &#exercise3 {
+        grid-column: 3;
+        grid-row: 7;
+      }
+
+      &#graphic1 {
+        grid-column: 2;
+        grid-row: 8;
+      }
     }
-  
+
     .imageText {
       display: flex;
       align-items: center;
       margin-left: 80px;
-  
+
+      &.image10 {
+        grid-column: 3;
+      }
+
       &.image1 {
         grid-column: 3;
       }
-  
+
       &.image2 {
         grid-column: 2;
-        grid-row: 2;
+        grid-row: 3;
       }
-  
+
       &.image3 {
         grid-column: 4;
-        grid-row: 2;
-      } 
-  
-      &.image4 {
-        grid-column: 3;
         grid-row: 3;
-        margin-left: 0;
       }
-  
-      &.image5 {
+
+      &.image4 {
         grid-column: 3;
         grid-row: 4;
         margin-left: 0;
       }
-  
+
+      &.image5 {
+        grid-column: 3;
+        grid-row: 5;
+        margin-left: 0;
+      }
+
       &.image6 {
         grid-column: 2;
-        grid-row: 5;
+        grid-row: 6;
       }
-  
+
       &.image7 {
-        grid-column: 4;
-        grid-row: 5;
-      }
-  
-      &.image8 {
         grid-column: 4;
         grid-row: 6;
       }
-  
-      &.image9 {
-        grid-column: 3;
+
+      &.image8 {
+        grid-column: 4;
         grid-row: 7;
       }
-  
+
+      &.image9 {
+        grid-column: 3;
+        grid-row: 8;
+      }
+
       .textBox {
-  
         .headerText {
-          font-family: 'Abril Fatface', cursive;
+          font-family: "Abril Fatface", cursive;
           font-size: 2vw;
-  
+
           &.text1-dark {
-            background: linear-gradient(30deg,  #00c3ff, #ffff1c);
+            background: linear-gradient(30deg, #00c3ff, #ffff1c);
             background-clip: text;
             -webkit-text-fill-color: transparent;
           }
@@ -309,7 +346,7 @@
             background-clip: text;
             -webkit-text-fill-color: transparent;
           }
-  
+
           &.text7-dark {
             background-image: linear-gradient(40deg, #00c6ff, #0072ff);
             background-clip: text;
@@ -320,18 +357,23 @@
             background-clip: text;
             -webkit-text-fill-color: transparent;
           }
+          &.text9-dark {
+            background-image: linear-gradient(10deg, #7303c0, #ec38bc, #fdeff9);
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+          }
         }
-  
+
         .subheaderText {
           font-family: "Montserrat", sans-serif;
           font-size: 1vw;
         }
-    
+
         p {
           font-family: "Montserrat", sans-serif;
           font-size: 1vw;
         }
-        
+
         .mainText1-dark {
           color: #ffff1c;
         }
@@ -355,6 +397,9 @@
         }
         .mainText8-dark {
           color: #cafcbf;
+        }
+        .mainText9-dark {
+          color: #fdeff9;
         }
       }
     }
@@ -370,275 +415,292 @@
     grid-template-columns: repeat(4, 1fr);
     gap: 20px;
     grid-auto-rows: minmax(600px, 1fr);
-  
+
     .imageCard {
       position: relative;
       margin-top: 50px;
-  
+
       &.imageCardDouble {
         margin-left: 20px;
       }
-  
+
       .imageDouble {
         height: 500px;
         position: absolute;
-  
+
         &.ffacingDouble1 {
           border-radius: 20px 0 0 20px;
           width: auto;
           z-index: 2;
         }
-  
+
         &.ffacingDouble2 {
           margin-left: 353px;
           border-radius: 0 20px 20px 0;
           width: auto;
           z-index: 2;
         }
-  
+
         &.bfacingDouble {
           width: 720px;
           border-radius: 20px;
           top: 25px;
           left: 20px;
           z-index: 1;
-  
+
           &.double-light {
-            background-image: linear-gradient(30deg,#a8caba, #5d4157 40%);
+            background-image: linear-gradient(30deg, #a8caba, #5d4157 40%);
           }
-  
+
           &.double-dark {
             background-image: linear-gradient(#f12711, #f5af19);
           }
         }
       }
-    
+
       .image {
         height: 500px;
         position: absolute;
-  
+
         &.seriesImage {
           height: 450px;
         }
-      
+
         &.frontfacing {
           border-radius: 20px;
           width: auto;
           z-index: 2;
         }
-      
+
         &.backfacing {
           width: 375px;
           border-radius: 20px;
           top: 25px;
           left: 20px;
           z-index: 1;
-  
+
           &.no1-light {
-            background-image: linear-gradient(30deg, #B4CBD9, #7794A6, #2C3840);
+            background-image: linear-gradient(30deg, #b4cbd9, #7794a6, #2c3840);
           }
-  
+
           &.no1-dark {
-            background-image: linear-gradient(30deg,  #00c3ff, #ffff1c);
+            background-image: linear-gradient(30deg, #00c3ff, #ffff1c);
           }
-  
+
           &.no2-light {
             background-image: linear-gradient(20deg, #355c7d, #6c5b7b, #c06c84);
           }
-  
+
           &.no2-dark {
             background-image: linear-gradient(20deg, #fc00ff, #00dbde);
           }
-  
+
           &.no3-light {
-            background-image: linear-gradient(40deg, #dae2f8, #d6a4a4); 
+            background-image: linear-gradient(40deg, #dae2f8, #d6a4a4);
           }
-  
+
           &.no3-dark {
-            background-image: linear-gradient(40deg, #f7ff00 30%, #db36a4); 
+            background-image: linear-gradient(40deg, #f7ff00 30%, #db36a4);
           }
-  
+
           &.no4-light {
             background-image: linear-gradient(40deg, #ffedbc, #ed4264);
           }
-  
+
           &.no4-dark {
             background-image: linear-gradient(40deg, #00c9ff, #92fe9d);
           }
-  
+
           &.no5-light {
             background-image: linear-gradient(10deg, #eecda3, #ef629f);
           }
-  
+
           &.no5-dark {
             background-image: linear-gradient(10deg, #8a2387, #e94057, #f27121);
           }
-  
+
           &.no6-light {
             background-image: linear-gradient(10deg, #7f7fd5, #86a8e7, #91eae4);
             width: 380px;
             height: 450px;
           }
-  
+
           &.no6-dark {
             background-image: linear-gradient(10deg, #ff00cc, #333399);
             width: 380px;
             height: 450px;
           }
-  
+
           &.no7-light {
             background-image: linear-gradient(10deg, #a1ffce, #faffd1);
             width: 370px;
             height: 450px;
           }
-  
+
           &.no7-dark {
             background-image: linear-gradient(10deg, #f79d00, #64f38c);
             width: 370px;
             height: 450px;
           }
-  
+
           &.no8-light {
             background-image: linear-gradient(10deg, #be93c5, #7bc6cc);
             width: 370px;
             height: 450px;
           }
-  
+
           &.no8-dark {
             background-image: linear-gradient(10deg, #00c6ff, #0072ff);
             width: 370px;
             height: 450px;
           }
-  
+
           &.no9-light {
             background-image: linear-gradient(10deg, #e52691, #c8e2fa);
             width: 335px;
           }
-  
+
           &.no9-dark {
             background-image: linear-gradient(10deg, #feb2be 60%, #cafcbf);
             width: 335px;
           }
+          &.no10-light {
+            background-image: linear-gradient(10deg, #ee9ca7, #ffdde1);
+            width: 380px;
+          }
+
+          &.no10-dark {
+            background-image: linear-gradient(10deg, #7303c0, #ec38bc, #fdeff9);
+            width: 380px;
+          }
         }
       }
-  
-      &#vapor1 {
+
+      &#booklet1 {
         grid-column: 2;
       }
-  
-      &#vapor2{
+
+      &#vapor1 {
+        grid-column: 2;
+        grid-row: 2;
+      }
+
+      &#vapor2 {
         margin-left: 20px;
         grid-column: 1;
-        grid-row: 2;
-      }
-  
-      &#vapor3 {
-        grid-column: 3;
-        grid-row: 2;
-      }
-  
-      &#article1 {
-        grid-column: 1/2;
         grid-row: 3;
       }
-  
-      &#article2 {
+
+      &#vapor3 {
+        grid-column: 3;
+        grid-row: 3;
+      }
+
+      &#article1 {
         grid-column: 1/2;
         grid-row: 4;
       }
-  
+
+      &#article2 {
+        grid-column: 1/2;
+        grid-row: 5;
+      }
+
       &#article3 {
         margin-left: 20px;
         grid-column: 1;
-        grid-row: 5;
+        grid-row: 6;
       }
-  
+
       &#photo1 {
         grid-column: 3;
-        grid-row: 5;
+        grid-row: 6;
       }
-  
+
       &#exercise1 {
         margin-left: 20px;
         grid-column: 1;
-        grid-row: 6;
+        grid-row: 7;
       }
-  
+
       &#exercise2 {
-        grid-column: 2;
-        grid-row: 6;
-      }
-  
-      &#exercise3 {
-        grid-column: 3;
-        grid-row: 6;
-      }
-  
-      &#graphic1 {
         grid-column: 2;
         grid-row: 7;
       }
+
+      &#exercise3 {
+        grid-column: 3;
+        grid-row: 7;
+      }
+
+      &#graphic1 {
+        grid-column: 2;
+        grid-row: 8;
+      }
     }
-  
+
     .imageText {
       display: flex;
       align-items: center;
       margin-left: 80px;
-  
+
+      &.image10 {
+        grid-column: 3;
+      }
+
       &.image1 {
         grid-column: 3;
       }
-  
+
       &.image2 {
         grid-column: 2;
-        grid-row: 2;
+        grid-row: 3;
       }
-  
+
       &.image3 {
         grid-column: 4;
-        grid-row: 2;
-      } 
-  
-      &.image4 {
-        grid-column: 4;
         grid-row: 3;
-        margin-left: 0;
       }
-  
-      &.image5 {
+
+      &.image4 {
         grid-column: 4;
         grid-row: 4;
         margin-left: 0;
       }
-  
-      &.image6 {
-        grid-column: 2;
-        grid-row: 5;
-      }
-  
-      &.image7 {
+
+      &.image5 {
         grid-column: 4;
         grid-row: 5;
+        margin-left: 0;
       }
-  
-      &.image8 {
+
+      &.image6 {
+        grid-column: 2;
+        grid-row: 6;
+      }
+
+      &.image7 {
         grid-column: 4;
         grid-row: 6;
       }
-  
-      &.image9 {
-        grid-column: 3;
+
+      &.image8 {
+        grid-column: 4;
         grid-row: 7;
       }
-  
+
+      &.image9 {
+        grid-column: 3;
+        grid-row: 8;
+      }
+
       .textBox {
-  
         .headerText {
-          font-family: 'Abril Fatface', cursive;
+          font-family: "Abril Fatface", cursive;
           font-size: 2vw;
-  
+
           &.text1-dark {
-            background: linear-gradient(30deg,  #00c3ff, #ffff1c);
+            background: linear-gradient(30deg, #00c3ff, #ffff1c);
             background-clip: text;
             -webkit-text-fill-color: transparent;
           }
@@ -667,7 +729,7 @@
             background-clip: text;
             -webkit-text-fill-color: transparent;
           }
-  
+
           &.text7-dark {
             background-image: linear-gradient(40deg, #00c6ff, #0072ff);
             background-clip: text;
@@ -678,18 +740,23 @@
             background-clip: text;
             -webkit-text-fill-color: transparent;
           }
+          &.text9-dark {
+            background-image: linear-gradient(10deg, #7303c0, #ec38bc, #fdeff9);
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+          }
         }
-  
+
         .subheaderText {
           font-family: "Montserrat", sans-serif;
           font-size: 1vw;
         }
-    
+
         p {
           font-family: "Montserrat", sans-serif;
           font-size: 1vw;
         }
-        
+
         .mainText1-dark {
           color: #ffff1c;
         }
@@ -713,6 +780,9 @@
         }
         .mainText8-dark {
           color: #cafcbf;
+        }
+        .mainText9-dark {
+          color: #fdeff9;
         }
       }
     }
@@ -728,275 +798,293 @@
     grid-template-columns: repeat(4, 1fr);
     gap: 20px;
     grid-auto-rows: minmax(600px, 1fr);
-  
+
     .imageCard {
       position: relative;
       margin-top: 50px;
-  
+
       &.imageCardDouble {
         margin-left: 20px;
       }
-  
+
       .imageDouble {
         height: 500px;
         position: absolute;
-  
+
         &.ffacingDouble1 {
           border-radius: 20px 0 0 20px;
           width: auto;
           z-index: 2;
         }
-  
+
         &.ffacingDouble2 {
           margin-left: 353px;
           border-radius: 0 20px 20px 0;
           width: auto;
           z-index: 2;
         }
-  
+
         &.bfacingDouble {
           width: 720px;
           border-radius: 20px;
           top: 25px;
           left: 20px;
           z-index: 1;
-  
+
           &.double-light {
-            background-image: linear-gradient(30deg,#a8caba, #5d4157 40%);
+            background-image: linear-gradient(30deg, #a8caba, #5d4157 40%);
           }
-  
+
           &.double-dark {
             background-image: linear-gradient(#f12711, #f5af19);
           }
         }
       }
-    
+
       .image {
         height: 500px;
         position: absolute;
-  
+
         &.seriesImage {
           height: 450px;
         }
-      
+
         &.frontfacing {
           border-radius: 20px;
           width: auto;
           z-index: 2;
         }
-      
+
         &.backfacing {
           width: 375px;
           border-radius: 20px;
           top: 25px;
           left: 20px;
           z-index: 1;
-  
+
           &.no1-light {
-            background-image: linear-gradient(30deg, #B4CBD9, #7794A6, #2C3840);
+            background-image: linear-gradient(30deg, #b4cbd9, #7794a6, #2c3840);
           }
-  
+
           &.no1-dark {
-            background-image: linear-gradient(30deg,  #00c3ff, #ffff1c);
+            background-image: linear-gradient(30deg, #00c3ff, #ffff1c);
           }
-  
+
           &.no2-light {
             background-image: linear-gradient(20deg, #355c7d, #6c5b7b, #c06c84);
           }
-  
+
           &.no2-dark {
             background-image: linear-gradient(20deg, #fc00ff, #00dbde);
           }
-  
+
           &.no3-light {
-            background-image: linear-gradient(40deg, #dae2f8, #d6a4a4); 
+            background-image: linear-gradient(40deg, #dae2f8, #d6a4a4);
           }
-  
+
           &.no3-dark {
-            background-image: linear-gradient(40deg, #f7ff00 30%, #db36a4); 
+            background-image: linear-gradient(40deg, #f7ff00 30%, #db36a4);
           }
-  
+
           &.no4-light {
             background-image: linear-gradient(40deg, #ffedbc, #ed4264);
           }
-  
+
           &.no4-dark {
             background-image: linear-gradient(40deg, #00c9ff, #92fe9d);
           }
-  
+
           &.no5-light {
             background-image: linear-gradient(10deg, #eecda3, #ef629f);
           }
-  
+
           &.no5-dark {
             background-image: linear-gradient(10deg, #8a2387, #e94057, #f27121);
           }
-  
+
           &.no6-light {
             background-image: linear-gradient(10deg, #7f7fd5, #86a8e7, #91eae4);
             width: 380px;
             height: 450px;
           }
-  
+
           &.no6-dark {
             background-image: linear-gradient(10deg, #ff00cc, #333399);
             width: 380px;
             height: 450px;
           }
-  
+
           &.no7-light {
             background-image: linear-gradient(10deg, #a1ffce, #faffd1);
             width: 370px;
             height: 450px;
           }
-  
+
           &.no7-dark {
             background-image: linear-gradient(10deg, #f79d00, #64f38c);
             width: 370px;
             height: 450px;
           }
-  
+
           &.no8-light {
             background-image: linear-gradient(10deg, #be93c5, #7bc6cc);
             width: 370px;
             height: 450px;
           }
-  
+
           &.no8-dark {
             background-image: linear-gradient(10deg, #00c6ff, #0072ff);
             width: 370px;
             height: 450px;
           }
-  
+
           &.no9-light {
             background-image: linear-gradient(10deg, #e52691, #c8e2fa);
             width: 335px;
           }
-  
+
           &.no9-dark {
             background-image: linear-gradient(10deg, #feb2be 60%, #cafcbf);
             width: 335px;
           }
+
+          &.no10-light {
+            background-image: linear-gradient(10deg, #ee9ca7, #ffdde1);
+            width: 380px;
+          }
+
+          &.no10-dark {
+            background-image: linear-gradient(10deg, #7303c0, #ec38bc, #fdeff9);
+            width: 380px;
+          }
         }
       }
-  
-      &#vapor1 {
+
+      &#booklet1 {
         grid-column: 2;
       }
-  
-      &#vapor2{
-        margin-left: 20px;
+
+      &#vapor1 {
         grid-column: 2;
         grid-row: 2;
       }
-  
-      &#vapor3 {
+
+      &#vapor2 {
+        margin-left: 20px;
         grid-column: 2;
         grid-row: 3;
       }
-  
-      &#article1 {
-        grid-column: 1/2;
+
+      &#vapor3 {
+        grid-column: 2;
         grid-row: 4;
       }
-  
-      &#article2 {
+
+      &#article1 {
         grid-column: 1/2;
         grid-row: 5;
       }
-  
+
+      &#article2 {
+        grid-column: 1/2;
+        grid-row: 6;
+      }
+
       &#article3 {
         margin-left: 20px;
         grid-column: 2;
-        grid-row: 6;
-      }
-  
-      &#photo1 {
-        grid-column: 2;
         grid-row: 7;
       }
-  
-      &#exercise1 {
-        margin-left: 20px;
+
+      &#photo1 {
         grid-column: 2;
         grid-row: 8;
       }
-  
-      &#exercise2 {
+
+      &#exercise1 {
+        margin-left: 20px;
         grid-column: 2;
         grid-row: 9;
       }
-  
-      &#exercise3 {
+
+      &#exercise2 {
         grid-column: 2;
         grid-row: 10;
       }
-  
-      &#graphic1 {
+
+      &#exercise3 {
         grid-column: 2;
         grid-row: 11;
       }
+
+      &#graphic1 {
+        grid-column: 2;
+        grid-row: 12;
+      }
     }
-  
+
     .imageText {
       display: flex;
       align-items: center;
       margin-left: 80px;
-  
+
+      &image10 {
+        grid-column: 3;
+      }
+
       &.image1 {
         grid-column: 3;
       }
-  
+
       &.image2 {
         grid-column: 3;
-        grid-row: 2;
+        grid-row: 3;
       }
-  
+
       &.image3 {
         grid-column: 3;
-        grid-row: 3;
-      } 
-  
-      &.image4 {
-        grid-column: 4;
         grid-row: 4;
-        margin-left: 10vw;
       }
-  
-      &.image5 {
+
+      &.image4 {
         grid-column: 4;
         grid-row: 5;
         margin-left: 10vw;
       }
-  
-      &.image6 {
-        grid-column: 3;
+
+      &.image5 {
+        grid-column: 4;
         grid-row: 6;
+        margin-left: 10vw;
       }
-  
-      &.image7 {
+
+      &.image6 {
         grid-column: 3;
         grid-row: 7;
       }
-  
+
+      &.image7 {
+        grid-column: 3;
+        grid-row: 8;
+      }
+
       &.image8 {
         grid-column: 3;
-        grid-row: 9;
+        grid-row: 10;
       }
-  
+
       &.image9 {
         grid-column: 3;
-        grid-row: 11;
+        grid-row: 12;
       }
-  
+
       .textBox {
-  
         .headerText {
-          font-family: 'Abril Fatface', cursive;
+          font-family: "Abril Fatface", cursive;
           font-size: 2vw;
-  
+
           &.text1-dark {
-            background: linear-gradient(30deg,  #00c3ff, #ffff1c);
+            background: linear-gradient(30deg, #00c3ff, #ffff1c);
             background-clip: text;
             -webkit-text-fill-color: transparent;
           }
@@ -1025,7 +1113,7 @@
             background-clip: text;
             -webkit-text-fill-color: transparent;
           }
-  
+
           &.text7-dark {
             background-image: linear-gradient(40deg, #00c6ff, #0072ff);
             background-clip: text;
@@ -1036,18 +1124,23 @@
             background-clip: text;
             -webkit-text-fill-color: transparent;
           }
+          &.text9-dark {
+            background-image: linear-gradient(10deg, #7303c0, #ec38bc, #fdeff9);
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+          }
         }
-  
+
         .subheaderText {
           font-family: "Montserrat", sans-serif;
           font-size: 1vw;
         }
-    
+
         p {
           font-family: "Montserrat", sans-serif;
           font-size: 1vw;
         }
-        
+
         .mainText1-dark {
           color: #ffff1c;
         }
@@ -1071,6 +1164,9 @@
         }
         .mainText8-dark {
           color: #cafcbf;
+        }
+        .mainText9-dark {
+          color: #fdeff9;
         }
       }
     }
@@ -1086,275 +1182,292 @@
     grid-template-columns: repeat(4, 1fr);
     gap: 20px;
     grid-auto-rows: minmax(400px, 1fr);
-  
+
     .imageCard {
       position: relative;
       margin-top: 50px;
-  
+
       &.imageCardDouble {
         margin-left: 100px;
       }
-  
+
       .imageDouble {
         height: 300px;
         position: absolute;
-  
+
         &.ffacingDouble1 {
           border-radius: 20px 0 0 20px;
           width: auto;
           z-index: 2;
         }
-  
+
         &.ffacingDouble2 {
           margin-left: 210px;
           border-radius: 0 20px 20px 0;
           width: auto;
           z-index: 2;
         }
-  
+
         &.bfacingDouble {
           width: 420px;
           border-radius: 20px;
           top: 25px;
           left: 20px;
           z-index: 1;
-  
+
           &.double-light {
-            background-image: linear-gradient(30deg,#a8caba, #5d4157 40%);
+            background-image: linear-gradient(30deg, #a8caba, #5d4157 40%);
           }
-  
+
           &.double-dark {
             background-image: linear-gradient(#f12711, #f5af19);
           }
         }
       }
-    
+
       .image {
         height: 300px;
         position: absolute;
-  
+
         &.seriesImage {
           height: 300px;
         }
-      
+
         &.frontfacing {
           border-radius: 20px;
           width: auto;
           z-index: 2;
         }
-      
+
         &.backfacing {
           width: 220px;
           border-radius: 15px;
           top: 25px;
           left: 20px;
           z-index: 1;
-  
+
           &.no1-light {
-            background-image: linear-gradient(30deg, #B4CBD9, #7794A6, #2C3840);
+            background-image: linear-gradient(30deg, #b4cbd9, #7794a6, #2c3840);
           }
-  
+
           &.no1-dark {
-            background-image: linear-gradient(30deg,  #00c3ff, #ffff1c);
+            background-image: linear-gradient(30deg, #00c3ff, #ffff1c);
           }
-  
+
           &.no2-light {
             background-image: linear-gradient(20deg, #355c7d, #6c5b7b, #c06c84);
           }
-  
+
           &.no2-dark {
             background-image: linear-gradient(20deg, #fc00ff, #00dbde);
           }
-  
+
           &.no3-light {
-            background-image: linear-gradient(40deg, #dae2f8, #d6a4a4); 
+            background-image: linear-gradient(40deg, #dae2f8, #d6a4a4);
           }
-  
+
           &.no3-dark {
-            background-image: linear-gradient(40deg, #f7ff00 30%, #db36a4); 
+            background-image: linear-gradient(40deg, #f7ff00 30%, #db36a4);
           }
-  
+
           &.no4-light {
             background-image: linear-gradient(40deg, #ffedbc, #ed4264);
           }
-  
+
           &.no4-dark {
             background-image: linear-gradient(40deg, #00c9ff, #92fe9d);
           }
-  
+
           &.no5-light {
             background-image: linear-gradient(10deg, #eecda3, #ef629f);
           }
-  
+
           &.no5-dark {
             background-image: linear-gradient(10deg, #8a2387, #e94057, #f27121);
           }
-  
+
           &.no6-light {
             background-image: linear-gradient(10deg, #7f7fd5, #86a8e7, #91eae4);
             width: 250px;
             height: 300px;
           }
-  
+
           &.no6-dark {
             background-image: linear-gradient(10deg, #ff00cc, #333399);
             width: 250px;
             height: 300px;
           }
-  
+
           &.no7-light {
             background-image: linear-gradient(10deg, #a1ffce, #faffd1);
             width: 250px;
             height: 300px;
           }
-  
+
           &.no7-dark {
             background-image: linear-gradient(10deg, #f79d00, #64f38c);
             width: 250px;
             height: 300px;
           }
-  
+
           &.no8-light {
             background-image: linear-gradient(10deg, #be93c5, #7bc6cc);
             width: 250px;
             height: 300px;
           }
-  
+
           &.no8-dark {
             background-image: linear-gradient(10deg, #00c6ff, #0072ff);
             width: 250px;
             height: 300px;
           }
-  
+
           &.no9-light {
             background-image: linear-gradient(10deg, #e52691, #c8e2fa);
             width: 210px;
           }
-  
+
           &.no9-dark {
             background-image: linear-gradient(10deg, #feb2be 60%, #cafcbf);
             width: 210px;
           }
+
+          &.no10-light {
+            background-image: linear-gradient(10deg, #ee9ca7, #ffdde1);
+            width: 230px;
+          }
+
+          &.no10-dark {
+            background-image: linear-gradient(10deg, #7303c0, #ec38bc, #fdeff9);
+            width: 230px;
+          }
         }
       }
-  
+
+      &#booklet1 {
+        grid-column: 2;
+      }
+
       &#vapor1 {
         grid-column: 2;
       }
-  
-      &#vapor2{
+
+      &#vapor2 {
         margin-left: 20px;
-        grid-column: 2;
-        grid-row: 2;
-      }
-  
-      &#vapor3 {
         grid-column: 2;
         grid-row: 3;
       }
-  
-      &#article1 {
-        grid-column: 1/2;
+
+      &#vapor3 {
+        grid-column: 2;
         grid-row: 4;
       }
-  
-      &#article2 {
+
+      &#article1 {
         grid-column: 1/2;
         grid-row: 5;
       }
-  
+
+      &#article2 {
+        grid-column: 1/2;
+        grid-row: 6;
+      }
+
       &#article3 {
         margin-left: 20px;
         grid-column: 2;
-        grid-row: 6;
-      }
-  
-      &#photo1 {
-        grid-column: 2;
         grid-row: 7;
       }
-  
-      &#exercise1 {
-        margin-left: 20px;
+
+      &#photo1 {
         grid-column: 2;
         grid-row: 8;
       }
-  
-      &#exercise2 {
+
+      &#exercise1 {
+        margin-left: 20px;
         grid-column: 2;
         grid-row: 9;
       }
-  
-      &#exercise3 {
+
+      &#exercise2 {
         grid-column: 2;
         grid-row: 10;
       }
-  
-      &#graphic1 {
+
+      &#exercise3 {
         grid-column: 2;
         grid-row: 11;
       }
+
+      &#graphic1 {
+        grid-column: 2;
+        grid-row: 12;
+      }
     }
-  
+
     .imageText {
       display: flex;
       align-items: center;
       margin-left: 80px;
-  
+
+      &.image10 {
+        grid-column: 3;
+      }
+
       &.image1 {
         grid-column: 3;
       }
-  
+
       &.image2 {
         grid-column: 3;
-        grid-row: 2;
+        grid-row: 3;
       }
-  
+
       &.image3 {
         grid-column: 3;
-        grid-row: 3;
-      } 
-  
-      &.image4 {
-        grid-column: 4;
         grid-row: 4;
-        margin-left: 0;
       }
-  
-      &.image5 {
+
+      &.image4 {
         grid-column: 4;
         grid-row: 5;
         margin-left: 0;
       }
-  
-      &.image6 {
-        grid-column: 3;
+
+      &.image5 {
+        grid-column: 4;
         grid-row: 6;
+        margin-left: 0;
       }
-  
-      &.image7 {
+
+      &.image6 {
         grid-column: 3;
         grid-row: 7;
       }
-  
+
+      &.image7 {
+        grid-column: 3;
+        grid-row: 8;
+      }
+
       &.image8 {
         grid-column: 3;
-        grid-row: 9;
+        grid-row: 10;
       }
-  
+
       &.image9 {
         grid-column: 3;
-        grid-row: 11;
+        grid-row: 12;
       }
-  
+
       .textBox {
-  
         .headerText {
-          font-family: 'Abril Fatface', cursive;
+          font-family: "Abril Fatface", cursive;
           font-size: 2vw;
-  
+
           &.text1-dark {
-            background: linear-gradient(30deg,  #00c3ff, #ffff1c);
+            background: linear-gradient(30deg, #00c3ff, #ffff1c);
             background-clip: text;
             -webkit-text-fill-color: transparent;
           }
@@ -1383,7 +1496,7 @@
             background-clip: text;
             -webkit-text-fill-color: transparent;
           }
-  
+
           &.text7-dark {
             background-image: linear-gradient(40deg, #00c6ff, #0072ff);
             background-clip: text;
@@ -1394,18 +1507,23 @@
             background-clip: text;
             -webkit-text-fill-color: transparent;
           }
+          &.text9-dark {
+            background-image: linear-gradient(10deg, #7303c0, #ec38bc, #fdeff9);
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+          }
         }
-  
+
         .subheaderText {
           font-family: "Montserrat", sans-serif;
           font-size: 1vw;
         }
-    
+
         p {
           font-family: "Montserrat", sans-serif;
           font-size: 1vw;
         }
-        
+
         .mainText1-dark {
           color: #ffff1c;
         }
@@ -1429,6 +1547,9 @@
         }
         .mainText8-dark {
           color: #cafcbf;
+        }
+        .mainText9-dark {
+          color: #fdeff9;
         }
       }
     }
@@ -1444,275 +1565,292 @@
     grid-template-columns: repeat(4, 1fr);
     gap: 20px;
     grid-auto-rows: minmax(400px, 1fr);
-  
+
     .imageCard {
       position: relative;
       margin-top: 50px;
-  
+
       &.imageCardDouble {
         margin-left: 100px;
       }
-  
+
       .imageDouble {
         height: 300px;
         position: absolute;
-  
+
         &.ffacingDouble1 {
           border-radius: 20px 0 0 20px;
           width: auto;
           z-index: 2;
         }
-  
+
         &.ffacingDouble2 {
           margin-left: 210px;
           border-radius: 0 20px 20px 0;
           width: auto;
           z-index: 2;
         }
-  
+
         &.bfacingDouble {
           width: 420px;
           border-radius: 20px;
           top: 25px;
           left: 20px;
           z-index: 1;
-  
+
           &.double-light {
-            background-image: linear-gradient(30deg,#a8caba, #5d4157 40%);
+            background-image: linear-gradient(30deg, #a8caba, #5d4157 40%);
           }
-  
+
           &.double-dark {
             background-image: linear-gradient(#f12711, #f5af19);
           }
         }
       }
-    
+
       .image {
         height: 300px;
         position: absolute;
-  
+
         &.seriesImage {
           height: 300px;
         }
-      
+
         &.frontfacing {
           border-radius: 20px;
           width: auto;
           z-index: 2;
         }
-      
+
         &.backfacing {
           width: 220px;
           border-radius: 15px;
           top: 25px;
           left: 20px;
           z-index: 1;
-  
+
           &.no1-light {
-            background-image: linear-gradient(30deg, #B4CBD9, #7794A6, #2C3840);
+            background-image: linear-gradient(30deg, #b4cbd9, #7794a6, #2c3840);
           }
-  
+
           &.no1-dark {
-            background-image: linear-gradient(30deg,  #00c3ff, #ffff1c);
+            background-image: linear-gradient(30deg, #00c3ff, #ffff1c);
           }
-  
+
           &.no2-light {
             background-image: linear-gradient(20deg, #355c7d, #6c5b7b, #c06c84);
           }
-  
+
           &.no2-dark {
             background-image: linear-gradient(20deg, #fc00ff, #00dbde);
           }
-  
+
           &.no3-light {
-            background-image: linear-gradient(40deg, #dae2f8, #d6a4a4); 
+            background-image: linear-gradient(40deg, #dae2f8, #d6a4a4);
           }
-  
+
           &.no3-dark {
-            background-image: linear-gradient(40deg, #f7ff00 30%, #db36a4); 
+            background-image: linear-gradient(40deg, #f7ff00 30%, #db36a4);
           }
-  
+
           &.no4-light {
             background-image: linear-gradient(40deg, #ffedbc, #ed4264);
           }
-  
+
           &.no4-dark {
             background-image: linear-gradient(40deg, #00c9ff, #92fe9d);
           }
-  
+
           &.no5-light {
             background-image: linear-gradient(10deg, #eecda3, #ef629f);
           }
-  
+
           &.no5-dark {
             background-image: linear-gradient(10deg, #8a2387, #e94057, #f27121);
           }
-  
+
           &.no6-light {
             background-image: linear-gradient(10deg, #7f7fd5, #86a8e7, #91eae4);
             width: 250px;
             height: 300px;
           }
-  
+
           &.no6-dark {
             background-image: linear-gradient(10deg, #ff00cc, #333399);
             width: 250px;
             height: 300px;
           }
-  
+
           &.no7-light {
             background-image: linear-gradient(10deg, #a1ffce, #faffd1);
             width: 250px;
             height: 300px;
           }
-  
+
           &.no7-dark {
             background-image: linear-gradient(10deg, #f79d00, #64f38c);
             width: 250px;
             height: 300px;
           }
-  
+
           &.no8-light {
             background-image: linear-gradient(10deg, #be93c5, #7bc6cc);
             width: 250px;
             height: 300px;
           }
-  
+
           &.no8-dark {
             background-image: linear-gradient(10deg, #00c6ff, #0072ff);
             width: 250px;
             height: 300px;
           }
-  
+
           &.no9-light {
             background-image: linear-gradient(10deg, #e52691, #c8e2fa);
             width: 210px;
           }
-  
+
           &.no9-dark {
             background-image: linear-gradient(10deg, #feb2be 60%, #cafcbf);
             width: 210px;
           }
+
+          &.no10-light {
+            background-image: linear-gradient(10deg, #ee9ca7, #ffdde1);
+            width: 230px;
+          }
+
+          &.no10-dark {
+            background-image: linear-gradient(10deg, #7303c0, #ec38bc, #fdeff9);
+            width: 230px;
+          }
         }
       }
-  
+
+      &#booklet1 {
+        grid-column: 2;
+      }
+
       &#vapor1 {
         grid-column: 2;
       }
-  
-      &#vapor2{
+
+      &#vapor2 {
         margin-left: 20px;
-        grid-column: 2;
-        grid-row: 2;
-      }
-  
-      &#vapor3 {
         grid-column: 2;
         grid-row: 3;
       }
-  
-      &#article1 {
-        grid-column: 1/2;
+
+      &#vapor3 {
+        grid-column: 2;
         grid-row: 4;
       }
-  
-      &#article2 {
+
+      &#article1 {
         grid-column: 1/2;
         grid-row: 5;
       }
-  
+
+      &#article2 {
+        grid-column: 1/2;
+        grid-row: 6;
+      }
+
       &#article3 {
         margin-left: 20px;
         grid-column: 2;
-        grid-row: 6;
-      }
-  
-      &#photo1 {
-        grid-column: 2;
         grid-row: 7;
       }
-  
-      &#exercise1 {
-        margin-left: 20px;
+
+      &#photo1 {
         grid-column: 2;
         grid-row: 8;
       }
-  
-      &#exercise2 {
+
+      &#exercise1 {
+        margin-left: 20px;
         grid-column: 2;
         grid-row: 9;
       }
-  
-      &#exercise3 {
+
+      &#exercise2 {
         grid-column: 2;
         grid-row: 10;
       }
-  
-      &#graphic1 {
+
+      &#exercise3 {
         grid-column: 2;
         grid-row: 11;
       }
+
+      &#graphic1 {
+        grid-column: 2;
+        grid-row: 12;
+      }
     }
-  
+
     .imageText {
       display: flex;
       align-items: center;
       margin-left: 80px;
-  
+
+      &.image10 {
+        grid-column: 3;
+      }
+
       &.image1 {
         grid-column: 3;
       }
-  
+
       &.image2 {
         grid-column: 3;
-        grid-row: 2;
+        grid-row: 3;
       }
-  
+
       &.image3 {
         grid-column: 3;
-        grid-row: 3;
-      } 
-  
-      &.image4 {
-        grid-column: 4;
         grid-row: 4;
-        margin-left: 0;
       }
-  
-      &.image5 {
+
+      &.image4 {
         grid-column: 4;
         grid-row: 5;
         margin-left: 0;
       }
-  
-      &.image6 {
-        grid-column: 3;
+
+      &.image5 {
+        grid-column: 4;
         grid-row: 6;
+        margin-left: 0;
       }
-  
-      &.image7 {
+
+      &.image6 {
         grid-column: 3;
         grid-row: 7;
       }
-  
+
+      &.image7 {
+        grid-column: 3;
+        grid-row: 8;
+      }
+
       &.image8 {
         grid-column: 3;
-        grid-row: 9;
+        grid-row: 10;
       }
-  
+
       &.image9 {
         grid-column: 3;
-        grid-row: 11;
+        grid-row: 12;
       }
-  
+
       .textBox {
-  
         .headerText {
-          font-family: 'Abril Fatface', cursive;
+          font-family: "Abril Fatface", cursive;
           font-size: 2vw;
-  
+
           &.text1-dark {
-            background: linear-gradient(30deg,  #00c3ff, #ffff1c);
+            background: linear-gradient(30deg, #00c3ff, #ffff1c);
             background-clip: text;
             -webkit-text-fill-color: transparent;
           }
@@ -1741,7 +1879,7 @@
             background-clip: text;
             -webkit-text-fill-color: transparent;
           }
-  
+
           &.text7-dark {
             background-image: linear-gradient(40deg, #00c6ff, #0072ff);
             background-clip: text;
@@ -1752,18 +1890,23 @@
             background-clip: text;
             -webkit-text-fill-color: transparent;
           }
+          &.text9-dark {
+            background-image: linear-gradient(10deg, #7303c0, #ec38bc, #fdeff9);
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+          }
         }
-  
+
         .subheaderText {
           font-family: "Montserrat", sans-serif;
           font-size: 1vw;
         }
-    
+
         p {
           font-family: "Montserrat", sans-serif;
           font-size: 1vw;
         }
-        
+
         .mainText1-dark {
           color: #ffff1c;
         }
@@ -1787,6 +1930,9 @@
         }
         .mainText8-dark {
           color: #cafcbf;
+        }
+        .mainText9-dark {
+          color: #fdeff9;
         }
       }
     }
@@ -1798,248 +1944,264 @@
     min-width: 100%;
     min-height: 100vh;
     padding-bottom: 5vh;
-  
+
     .imageCard {
       position: relative;
       margin-top: 50px;
       margin-left: 18vw;
-  
+
       &.imageCardDouble {
         margin-left: 8vw;
       }
-  
+
       .imageDouble {
         height: 60vw;
         position: absolute;
-  
+
         &.ffacingDouble1 {
           border-radius: 3vw 0 0 3vw;
           width: auto;
           z-index: 2;
         }
-  
+
         &.ffacingDouble2 {
           margin-left: 42vw;
           border-radius: 0 3vw 3vw 0;
           width: auto;
           z-index: 2;
         }
-  
+
         &.bfacingDouble {
           width: 84vw;
           border-radius: 3vw;
           top: 3vw;
           left: 3vw;
           z-index: 1;
-  
+
           &.double-light {
-            background-image: linear-gradient(30deg,#a8caba, #5d4157 40%);
+            background-image: linear-gradient(30deg, #a8caba, #5d4157 40%);
           }
-  
+
           &.double-dark {
             background-image: linear-gradient(#f12711, #f5af19);
           }
         }
       }
-    
+
       .image {
         height: 80vw;
         position: absolute;
-      
+
         &.frontfacing {
           border-radius: 3vw;
           width: auto;
           z-index: 2;
         }
-      
+
         &.backfacing {
           width: 58vw;
           border-radius: 3vw;
           top: 4vw;
           left: 3.5vw;
           z-index: 1;
-  
+
           &.no1-light {
-            background-image: linear-gradient(30deg, #B4CBD9, #7794A6, #2C3840);
+            background-image: linear-gradient(30deg, #b4cbd9, #7794a6, #2c3840);
           }
-  
+
           &.no1-dark {
-            background-image: linear-gradient(30deg,  #00c3ff, #ffff1c);
+            background-image: linear-gradient(30deg, #00c3ff, #ffff1c);
           }
-  
+
           &.no2-light {
             background-image: linear-gradient(20deg, #355c7d, #6c5b7b, #c06c84);
           }
-  
+
           &.no2-dark {
             background-image: linear-gradient(20deg, #fc00ff, #00dbde);
           }
-  
+
           &.no3-light {
-            background-image: linear-gradient(40deg, #dae2f8, #d6a4a4); 
+            background-image: linear-gradient(40deg, #dae2f8, #d6a4a4);
           }
-  
+
           &.no3-dark {
-            background-image: linear-gradient(40deg, #f7ff00 30%, #db36a4); 
+            background-image: linear-gradient(40deg, #f7ff00 30%, #db36a4);
           }
-  
+
           &.no4-light {
             background-image: linear-gradient(40deg, #ffedbc, #ed4264);
           }
-  
+
           &.no4-dark {
             background-image: linear-gradient(40deg, #00c9ff, #92fe9d);
           }
-  
+
           &.no5-light {
             background-image: linear-gradient(10deg, #eecda3, #ef629f);
           }
-  
+
           &.no5-dark {
             background-image: linear-gradient(10deg, #8a2387, #e94057, #f27121);
           }
-  
+
           &.no6-light {
             background-image: linear-gradient(10deg, #7f7fd5, #86a8e7, #91eae4);
             width: 67vw;
             height: 80vw;
           }
-  
+
           &.no6-dark {
             background-image: linear-gradient(10deg, #ff00cc, #333399);
             width: 67vw;
             height: 80vw;
           }
-  
+
           &.no7-light {
             background-image: linear-gradient(10deg, #a1ffce, #faffd1);
             width: 67vw;
             height: 80vw;
           }
-  
+
           &.no7-dark {
             background-image: linear-gradient(10deg, #f79d00, #64f38c);
             width: 67vw;
             height: 80vw;
           }
-  
+
           &.no8-light {
             background-image: linear-gradient(10deg, #be93c5, #7bc6cc);
             width: 67vw;
             height: 80vw;
           }
-  
+
           &.no8-dark {
             background-image: linear-gradient(10deg, #00c6ff, #0072ff);
             width: 67vw;
             height: 80vw;
           }
-  
+
           &.no9-light {
             background-image: linear-gradient(10deg, #e52691, #c8e2fa);
             width: 55vw;
           }
-  
+
           &.no9-dark {
             background-image: linear-gradient(10deg, #feb2be 60%, #cafcbf);
             width: 55vw;
           }
+
+          &.no10-light {
+            background-image: linear-gradient(10deg, #ee9ca7, #ffdde1);
+            width: 60vw;
+          }
+
+          &.no10-dark {
+            background-image: linear-gradient(10deg, #7303c0, #ec38bc, #fdeff9);
+            width: 60vw;
+          }
         }
       }
-  
-      &#vapor2{
+
+      &#booklet1 {
         margin-top: 20vw;
       }
-  
+
+      &#vapor2 {
+        margin-top: 20vw;
+      }
+
       &#vapor3 {
         margin-top: 20vw;
       }
-  
+
       &#article1 {
         margin-top: 20vw;
       }
-  
+
       &#article2 {
         margin-top: 20vw;
       }
-  
+
       &#article3 {
         margin-top: 20vw;
       }
-  
+
       &#photo1 {
         margin-top: 20vw;
       }
-  
+
       &#exercise1 {
         margin-top: 20vw;
       }
-  
+
       &#exercise2 {
         margin-top: 110vw;
       }
-  
+
       &#exercise3 {
         margin-top: 200vw;
       }
-  
+
       &#graphic1 {
         margin-top: 20vw;
       }
     }
-  
+
     .imageText {
       display: flex;
       align-items: center;
       margin-left: 9vw;
       margin-right: 9vw;
-  
+
+      &.image10 {
+        margin-top: 108vw;
+      }
       &.image1 {
         margin-top: 100vw;
       }
-  
+
       &.image2 {
         margin-top: 105vw;
       }
-  
+
       &.image3 {
         margin-top: 105vw;
-      } 
-  
+      }
+
       &.image4 {
         margin-top: 85vw;
         margin-left: 8vw;
       }
-  
+
       &.image5 {
         margin-top: 85vw;
         margin-left: 8vw;
       }
-  
+
       &.image6 {
         margin-top: 105vw;
       }
-  
+
       &.image7 {
         margin-top: 105vw;
       }
-  
+
       &.image8 {
         margin-top: 290vw;
       }
-  
+
       &.image9 {
         margin-top: 115vw;
       }
-  
+
       .textBox {
-  
         .headerText {
-          font-family: 'Abril Fatface', cursive;
+          font-family: "Abril Fatface", cursive;
           font-size: 7.5vw;
-  
+
           &.text1-dark {
-            background: linear-gradient(30deg,  #00c3ff, #ffff1c);
+            background: linear-gradient(30deg, #00c3ff, #ffff1c);
             background-clip: text;
             -webkit-text-fill-color: transparent;
           }
@@ -2068,7 +2230,7 @@
             background-clip: text;
             -webkit-text-fill-color: transparent;
           }
-  
+
           &.text7-dark {
             background-image: linear-gradient(40deg, #00c6ff, #0072ff);
             background-clip: text;
@@ -2079,18 +2241,24 @@
             background-clip: text;
             -webkit-text-fill-color: transparent;
           }
+
+          &.text9-dark {
+            background-image: linear-gradient(10deg, #7303c0, #ec38bc, #fdeff9);
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+          }
         }
-  
+
         .subheaderText {
           font-family: "Montserrat", sans-serif;
           font-size: 6vw;
         }
-    
+
         p {
           font-family: "Montserrat", sans-serif;
           font-size: 6vw;
         }
-        
+
         .mainText1-dark {
           color: #ffff1c;
         }
@@ -2114,6 +2282,9 @@
         }
         .mainText8-dark {
           color: #cafcbf;
+        }
+        .mainText9-dark {
+          color: #fdeff9;
         }
       }
     }
