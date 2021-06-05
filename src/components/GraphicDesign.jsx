@@ -81,7 +81,7 @@ const GraphicDesign = () => {
                 <a
                   id={`bookletLink-${theme}`}
                   className={`mainText9${theme}`}
-                  href="https://michellexjacoedo.netlify.app/"
+                  href="https://michelle-booklet.netlify.app"
                 >
                   Link
                 </a>
